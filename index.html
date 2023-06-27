@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <script src="app.js"></script>
+        <title>Boggle Project</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <!-- ==================================================== -->
+    <body>
+   
+        <div class="startAction">
+            <button onclick="roll()">Click to Get Letters</button>
+        </div>
+
+        <!-- there will be 16 letters here -->
+        <div class="letter1" onclick="readLetter1()"></div>
+        <div class="letter2" onclick="readLetter2()"></div>
+        <div class="letter3" onclick="readLetter3()"></div>
+
+ 
+        <!-- test letter box (4x4 grid) -->
+        <div class="outerLetterContainer">
+            <section class="letterContainer">
+                <!-- row 1 -->
+                <div class="letter" id="l1" onclick="let1()"></div>
+                <div class="letter" id="l2" onclick="let2()"></div>
+                <div class="letter" id="l3" onclick="let3()"></div>
+                <div class="letter" id="l4" onclick="let4()"></div>
+                <!-- row 2 -->
+                <div class="letter" id="l5" onclick="let5()"></div>
+                <div class="letter" id="l6" onclick="let6()"></div>
+                <div class="letter" id="l7" onclick="let7()"></div>
+                <div class="letter" id="l8" onclick="let8()"></div>
+              <!-- row 1 -->
+              <div class="letter" id="l9" onclick="let9()"></div>
+              <div class="letter" id="l10" onclick="let10()"></div>
+              <div class="letter" id="l11" onclick="let11()"></div>
+              <div class="letter" id="l12" onclick="let12()"></div>
+              <!-- row 2 -->
+              <div class="letter" id="l13" onclick="let13()"></div>
+              <div class="letter" id="l14" onclick="let14()"></div>
+              <div class="letter" id="l15" onclick="let15()"></div>
+              <div class="letter" id="l16" onclick="let16()"></div>
+            </section>
+        </div>
+
+
+               <!-- a box to hold leftPlayer and rightPlayer  -->
+               <div class="bothPlayersWords">
+            
+                <!-- leftPlayer  -->
+                <div class="leftPlayer">
+    
+                    <button onclick="startTen()">Start Button</button>
+    
+                    <button class="showWord1" onclick="showTheWord1()">Word 1: &nbsp;&nbsp;</button>
+    
+                    <button class="showWord2" onclick="showTheWord2()">Word 2:</button>
+                </div>
+    
+                <!-- rightPlayer  -->
+                <div class="rightPlayer">
+                    <button class="showWord1" onclick="showTheWord1()">Word 1:</button>
+    
+                    <button class="showWord4" onclick="showTheWord4()">Letters List:</button>
+                </div>
+    
+            </div> <!-- end bothPlayers  -->
+    
+        
+    </body>
+</html>

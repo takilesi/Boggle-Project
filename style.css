@@ -1,0 +1,62 @@
+.letter1, .letter2, .letter3{
+    border: solid black; 
+    height: 100px; 
+    width: 100px; 
+    color: black; 
+    font-size: 40px; 
+    background-color: yellow;
+    text-align: center;
+    padding-top: auto;
+    padding-bottom: auto;
+}
+.letter1:active{
+    background-color: rgb(123, 180, 17);
+}
+.letter2:active{
+    background-color: rgb(123, 180, 17);
+}
+.letter3:active{
+    background-color: rgb(123, 180, 17);
+}
+
+.bothPlayersWords{
+    width: 100vw; 
+    height: 30vh; 
+    border: solid blue; 
+    display: flex; 
+}
+
+.leftPlayer, .rightPlayer{
+    width: 50vw; 
+    height: 30vh; 
+    border: solid purple; 
+    display: flex; 
+    flex-direction: column;
+}
+.showWord1, .showWord2{
+    text-align: left;
+}
+
+.outerLetterContainer{
+    height: 40vh; 
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.letterContainer{
+    margin: 0 auto; 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(4, 1fr);
+    max-width: 8em;
+}
+
+.letter{
+    border: .1em solid black; 
+    min-width: 2em; 
+    min-height: 2em;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+}
