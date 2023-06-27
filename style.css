@@ -1,3 +1,8 @@
+#size{
+    font-size: 20px;
+}
+
+
 .letter1, .letter2, .letter3{
     border: solid black; 
     height: 100px; 
@@ -59,4 +64,12 @@
     align-items: center;
     justify-content: center;
     font-size: 3em;
+}
+ 
+.wordCss{
+    text-align:  left;
+}
+
+.letter:active{
+    background-color: rgb(123, 180, 17);
 }

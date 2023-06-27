@@ -8,22 +8,22 @@ const player = {
 // game's letter object 
 
 const fourBy4 = {
-    letter1: "", 
-    letter2: "", 
-    letter3: "", 
-    letter4: "", 
-    letter5: "", 
-    letter6: "", 
-    letter7: "", 
-    letter8: "", 
-    letter9: "", 
-    letter10: "", 
-    letter11: "", 
-    letter12: "", 
-    letter13: "", 
-    letter14: "", 
-    letter15: "", 
-    letter16: ""
+    // letter1: "", 
+    // letter2: "", 
+    // letter3: "", 
+    // letter4: "", 
+    // letter5: "", 
+    // letter6: "", 
+    // letter7: "", 
+    // letter8: "", 
+    // letter9: "", 
+    // letter10: "", 
+    // letter11: "", 
+    // letter12: "", 
+    // letter13: "", 
+    // letter14: "", 
+    // letter15: "", 
+    // letter16: ""
 }; 
 
 // each players word list object 
@@ -69,28 +69,6 @@ const putAin = () => {
     document.querySelector(".letter3").innerHTML = fourBy4.letter3;
 }
 
-// const startTen = () => {
-//     for ( let i=1; i<11; i++) {
-
-//         let wordOrdinal = `.showWord${i}`; 
-//         document.querySelector(wordOrdinal).style.backgroundColor = "lightblue"; 
-
-//         let word = `p1.word${i}[0]`; 
-//         let wordActive = `p1.word${i}[1]`;
-
-//         while (wordActive == false) {
-
-            tempWord = ""
-
-            const readLetter1 = () => {
-                p1.word1 += fourBy4.letter1; 
-            }
-            const readLetter2 = () => {
-                p1.word1 += fourBy4.letter2; 
-            }
-            const readLetter3 = () => {
-                p1.word1 += fourBy4.letter3; 
-            }
 
 
 //         }
@@ -142,10 +120,46 @@ const showTheWord4 = () => {
 
 const roll = () => {
     for (i=1; i<17; i++){
+
+        let letterTemp = fixQ(); 
+
         let letterNumber = `l${i}`; 
-        document.getElementById(letterNumber).innerHTML = fixQ();
+        document.getElementById(letterNumber).innerHTML = letterTemp;
+
+        // push to fourBy4 object 
+        let objectLetterNumber = `letter${i}`
+
+        fourBy4[objectLetterNumber] = letterTemp;                 
+
     }
 }
+
+const test = () => {
+    document.querySelector(".test").innerHTML += JSON.stringify(fourBy4); 
+}
+
+const let1 = () => {
+    tempWord = ""; 
+
+    
+}
+
+
+
+            const readLetter1 = () => {
+                p1.word1 += fourBy4.letter1; 
+            }
+            const readLetter2 = () => {
+                p1.word1 += fourBy4.letter2; 
+            }
+            const readLetter3 = () => {
+                p1.word1 += fourBy4.letter3; 
+            }
+
+
+
+
+
 
 
 // 561 letters in letterFreak 
@@ -218,6 +232,4 @@ const fixQ = () => {
     return genRanLetFixQ
 }
 
-// letters.forEach( (letter, index) => {
 
-// })
