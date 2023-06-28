@@ -24,26 +24,42 @@
     border: solid purple; 
     display: flex; 
     flex-direction: column;
+    margin: 3px; 
+    padding: 10px; 
+    background-image: linear-gradient(rgb(186, 148, 148), rgb(244, 244, 235));
 }
 
 .outerLetterContainer{
     height: 40vh; 
-    margin-right: auto;
+    border: solid purple; 
+    margin-right: 10px;
+    padding-top: 20px;
     margin-left: auto;
+    background-image: url(https://img.freepik.com/premium-photo/clear-blue-sky-sunset-with-horizon-calm-ocean-sea-background-picturesque_31965-138504.jpg);
+    background-size: cover;
+    display: flex; 
+    justify-content: center;
 }
-
+/* .anotherContainer{
+    width: 30em;
+    border-color: black;
+    height: 30em; 
+    background-color: white;
+} */
 .letterContainer{
-    /* margin: 0 auto;  */
     display: grid; 
     grid-template-columns: repeat(4, 1fr); 
     grid-template-rows: repeat(4, 1fr);
-    max-width: 8em;
-    /* margin: 10px;  */
-    margin-left: 36.4vw;
-    /* margin-right: auto; */
+    justify-self: center;
+    gap: 5px; 
+    margin-top: 10px; 
 }
 
-
+.letterContainer > div {
+    border-color: solid purple;
+    background-color: white;
+    box-shadow: 2px 2px rgb(90, 81, 81);
+}
 
 
 
@@ -60,7 +76,17 @@
 .wordCss{
     text-align:  left;
     font-size: 20px;
+    margin: 3px; 
+    padding: 2px; 
+    box-shadow: 2px 2px rgb(90, 81, 81);
 }
+
+
+
+
+
+
+
 
 #cent{
     text-align: center;
