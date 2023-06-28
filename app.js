@@ -5,6 +5,25 @@ const player = {
     player2: ""
 }; 
 
+const spellCheck = () => {
+    // let Typo = require('typo-js-ts').Typo;
+    
+    new Typo("en_US")
+    .ready.then(dictionary => {
+        // Promise that dictionary is loaded
+        // do worl
+        // test if mispelled is the corect spelling for en_US
+        spelledRight = dictionary.check(tempWord);
+        if (spelledRight == false){
+            document.querySelector(".mispelled").innerHTML = tempWord + " is mispelled, try again!"; 
+        }
+    })
+    .catch((error) => {
+        // dictionary was not loaded
+        console.error(error);
+    });
+}
+
 // game's letter object: gets popuated by the roll() function
 // 
 const fourBy4 = {
@@ -138,6 +157,7 @@ const let15 = () => { tempWord += fourBy4.letter15; }
 const let16 = () => { tempWord += fourBy4.letter16; }
 
 const word1 = () => {
+    spellCheck(); 
     let str = "Word 1:  "; 
     let w = document.getElementById("w1");
     w.innerHTML = str; 
@@ -147,7 +167,7 @@ const word1 = () => {
 }
 
 const word2 = () => {
-    let str = "Word 2:  ";
+    let str = "Word 1:  ";
     let w = document.getElementById("w2");
     w.innerHTML = str;
     w.innerHTML += tempWord; 
@@ -156,7 +176,7 @@ const word2 = () => {
 }
 
 const word3 = () => {
-    let str = "Word 3:  "; 
+    let str = "Word 2:  "; 
     let w = document.getElementById("w3"); 
     w.innerHTML = str;
     w.innerHTML += tempWord; 
@@ -165,7 +185,7 @@ const word3 = () => {
 }
 
 const word4 = () => {
-    let str = "Word 4:  ";
+    let str = "Word 2:  ";
     let w = document.getElementById("w4"); 
     w.innerHTML = str;
     w.innerHTML += tempWord; 
@@ -174,7 +194,7 @@ const word4 = () => {
 }
 
 const word5 = () => {
-    let str = "Word 5:  ";
+    let str = "Word 3:  ";
     let w = document.getElementById("w5"); 
     w.innerHTML = str;
     w.innerHTML += tempWord; 
@@ -183,7 +203,7 @@ const word5 = () => {
 }
 
 const word6 = () => {
-    let str = "Word 6:  ";
+    let str = "Word 3:  ";
     let w = document.getElementById("w6"); 
     w.innerHTML = str;
     w.innerHTML += tempWord; 
@@ -192,7 +212,7 @@ const word6 = () => {
 }
 
 const word7 = () => {
-    let str = "Word 7:  ";
+    let str = "Word 4:  ";
     let w = document.getElementById("w7"); 
     w.innerHTML = str;
     w.innerHTML += tempWord;
@@ -201,7 +221,7 @@ const word7 = () => {
 }
 
 const word8 = () => {
-    let str = "Word 8:  ";
+    let str = "Word 4:  ";
     let w = document.getElementById("w8"); 
     w.innerHTML = str;
     w.innerHTML += tempWord; 
@@ -210,7 +230,7 @@ const word8 = () => {
 }
 
 const word9 = () => {
-    let str = "Word 9:  ";
+    let str = "Word 5:  ";
     let w = document.getElementById("w9"); 
     w.innerHTML = str;
     w.innerHTML += tempWord; 
@@ -219,7 +239,7 @@ const word9 = () => {
 }
 
 const word10 = () => {
-    let str = "Word 10:  ";
+    let str = "Word 5:  ";
     let w = document.getElementById("w10"); 
     w.innerHTML = str;
     w.innerHTML += tempWord; 
@@ -230,7 +250,7 @@ const word10 = () => {
 //  second half of words
 
 const word11 = () => {
-    let str = "Word 11;  ";
+    let str = "Word 6:  ";
     let w = document.getElementById("w11"); 
     w.innerHTML = str;
     w.innerHTML += tempWord; 
@@ -239,7 +259,7 @@ const word11 = () => {
 }
 
 const word12 = () => {
-    let str = "Word 12;  ";
+    let str = "Word 6:  ";
     let w = document.getElementById("w12")
     w.innerHTML = str;
     w.innerHTML += tempWord; 
@@ -248,7 +268,7 @@ const word12 = () => {
 }
 
 const word13 = () => {
-    let str = "Word 13;  ";
+    let str = "Word 7:  ";
     let w = document.getElementById("w13")
     w.innerHTML = str;
     w.innerHTML += tempWord; 
@@ -257,7 +277,7 @@ const word13 = () => {
 }
 
 const word14 = () => {
-    let str = "Word 14;  ";
+    let str = "Word 7:  ";
     let w = document.getElementById("w14"); 
     w.innerHTML = str;
     w.innerHTML += tempWord; 
@@ -266,7 +286,7 @@ const word14 = () => {
 }
 
 const word15 = () => {
-    let str = "Word 15;  ";
+    let str = "Word 8:  ";
     let w = document.getElementById("w15"); 
     w.innerHTML = str;
     w.innerHTML += tempWord; 
@@ -275,7 +295,7 @@ const word15 = () => {
 }
 
 const word16 = () => {
-    let str = "Word 16;  ";
+    let str = "Word 8:  ";
     let w = document.getElementById("w16"); 
     w.innerHTML = str;
     w.innerHTML += tempWord; 
@@ -284,7 +304,7 @@ const word16 = () => {
 }
 
 const word17 = () => {
-    let str = "Word 17;  ";
+    let str = "Word 9:  ";
     let w = document.getElementById("w17");
     w.innerHTML = str;
     w.innerHTML += tempWord;
@@ -293,7 +313,7 @@ const word17 = () => {
 }
 
 const word18 = () => {
-    let str = "Word 18;  ";
+    let str = "Word 9:  ";
     let w = document.getElementById("w18");
     w.innerHTML = str;
     w.innerHTML += tempWord; 
@@ -302,7 +322,7 @@ const word18 = () => {
 }
 
 const word19 = () => {
-    let str = "Word 19;  ";
+    let str = "Word 10:  ";
     let w = document.getElementById("w19");
     w.innerHTML = str;
     w.innerHTML += tempWord; 
@@ -310,8 +330,10 @@ const word19 = () => {
     tempWord = ""; 
 }
 
+
+
 const word20 = () => {
-    let str = "Word 20;  ";
+    let str = "Word 10:  ";
     let w = document.getElementById("w20")
     w.innerHTML = str;
     w.innerHTML += tempWord; 

@@ -1,67 +1,64 @@
 #size{
+    font-size: 1.5em;
+    margin-left: 2em; 
+    margin-right: 2em;
+    margin-top: 1em;
+}
+.startAction{
+    /* height: 20px;  */
+    display: flex; 
+    justify-content: center;
     font-size: 20px;
-}
 
-.test1, .test2, .test3{
-    display: flex;
-    flex-direction: column;
-    width: fit-content; 
 }
 
 
 
-.bothPlayersWords{
-    
-    height: auto; 
-    /* border: solid blue;  */
-    display: flex; 
-    padding-right: 10px;
-}
 
-.leftPlayer, .rightPlayer{
-    width: 50vw; 
-    height: auto; 
-    border: solid purple; 
-    display: flex; 
-    flex-direction: column;
-    margin: 3px; 
-    padding: 10px; 
-    background-image: linear-gradient(rgb(186, 148, 148), rgb(244, 244, 235));
-}
+
 
 .outerLetterContainer{
     height: 40vh; 
     border: solid purple; 
+    background-image: url(https://img.freepik.com/premium-photo/clear-blue-sky-sunset-with-horizon-calm-ocean-sea-background-picturesque_31965-138504.jpg);
+    background-size: cover;
+
+}
+.anotherContainer{
+    /* width: 30em;
+    border-color: black;
+    height: 30em; 
+    background-color: white; */
+
     margin-right: 10px;
     padding-top: 20px;
     margin-left: auto;
-    background-image: url(https://img.freepik.com/premium-photo/clear-blue-sky-sunset-with-horizon-calm-ocean-sea-background-picturesque_31965-138504.jpg);
-    background-size: cover;
     display: flex; 
     justify-content: center;
 }
-/* .anotherContainer{
-    width: 30em;
-    border-color: black;
-    height: 30em; 
-    background-color: white;
-} */
+
 .letterContainer{
     display: grid; 
     grid-template-columns: repeat(4, 1fr); 
     grid-template-rows: repeat(4, 1fr);
     justify-self: center;
-    gap: 5px; 
+    gap: 7px; 
     margin-top: 10px; 
 }
 
 .letterContainer > div {
     border-color: solid purple;
-    background-color: white;
-    box-shadow: 2px 2px rgb(90, 81, 81);
+    /* background-color: white; */
+    box-shadow: 4px 4px rgb(147, 143, 143);
+
+    font-style: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-
+.mispelled{
+    font-size: 30px;
+    background-color: red;
+}
 
 .letter{
     border: .1em solid black; 
@@ -71,6 +68,15 @@
     align-items: center;
     justify-content: center;
     font-size: 3em;
+    background-image: linear-gradient(rgb(194, 187, 187), rgb(244, 244, 235));
+}
+
+#cent{
+    text-align: center;
+}
+.letter:active{
+    background-image: none;
+    background-color: rgb(123, 180, 17);
 }
  
 .wordCss{
@@ -88,9 +94,39 @@
 
 
 
-#cent{
-    text-align: center;
+
+.bothPlayersWords{
+    border: solid purple;
+    height: 50vh; 
+    /* border: solid blue;  */
+   
+    padding-right: 10px;
+    background-image: url(https://i.pinimg.com/originals/f2/c4/ec/f2c4ec760a4282838f5a1ed7b134bb6a.jpg);
+    background-size: cover;
 }
-.letter:active{
-    background-color: rgb(123, 180, 17);
+
+.bothPlayersWordsInner{
+    display: flex; 
+}
+
+.leftPlayer, .rightPlayer{
+    width: 50vw; 
+    height: fit-content;
+    border: solid purple; 
+    display: flex; 
+    flex-direction: column;
+    margin: 3px; 
+    padding: 10px; 
+    background-image: linear-gradient(rgb(186, 148, 148), rgb(244, 244, 235));
+}
+#sized{
+    font-size: 20px;
+    padding: 2px; 
+    margin-top: 5px; 
+    margin-left: 5px;
+}
+.test1, .test2, .test3{
+    display: flex;
+    flex-direction: column;
+    width: fit-content; 
 }
