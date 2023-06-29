@@ -71,10 +71,26 @@
     background-image: linear-gradient(rgb(194, 187, 187), rgb(244, 244, 235));
 }
 
-#cent{
+#cent1,#cent2{
     text-align: center;
 }
+
 .letter:active{
+    background-image: none;
+    background-color: rgb(123, 180, 17);
+}
+
+/* .letter {
+    /* Default state */
+
+/* 
+#l1:checked.letter {
+    background-image: none;
+    background-color: rgb(123, 180, 17);
+} */
+
+
+.letter:focus{
     background-image: none;
     background-color: rgb(123, 180, 17);
 }
@@ -87,13 +103,7 @@
     box-shadow: 2px 2px rgb(90, 81, 81);
 }
 
-
-
-
-
-
-
-
+/* ---------------------------------------------- */
 
 .bothPlayersWords{
     border: solid purple;

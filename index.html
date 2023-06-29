@@ -13,26 +13,19 @@
     </head>
     <!-- ==================================================== -->
     <body>
-   
-
-
-   
-
  
         <!-- test letter box (4x4 grid) -->
         <div class="outerLetterContainer">
             <div class="startAction">
                 <button id="size" onclick="roll()">Click to Get Letters</button>
+                <button id="size" onclick="tally()">Tally Scores</button>
                 <button id="size" onclick="resetTempWord()">Start Word Over</button>
-    
             </div>
-
-
 
             <div class="anotherContainer">
                 <section class="letterContainer">
                     <!-- row 1 -->
-                    <div class="letter" id="l1" onclick="let1()"></div>
+                    <div for="toggle" class="letter" id="l1" onclick="let1()"></div>
                     <div class="letter" id="l2" onclick="let2()"></div>
                     <div class="letter" id="l3" onclick="let3()"></div>
                     <div class="letter" id="l4" onclick="let4()"></div>
@@ -63,7 +56,7 @@
                 <!-- leftPlayer  -->
                 <div class="leftPlayer">
 
-                    <button id="cent" class="wordCss" onclick="">Player 1</button>
+                    <button id="cent1" class="wordCss" onclick="">Player 1</button>
 
                     <button class="wordCss" id="w1" onclick="word1()">Word 1:&nbsp;&nbsp;</button>
                     <button class="wordCss" id="w3" onclick="word3()">Word 2:&nbsp;&nbsp;</button>
@@ -80,7 +73,7 @@
                 <!-- rightPlayer  -->
                 <div class="rightPlayer">
 
-                    <button id="cent" class="wordCss" onclick="">Player 2</button>
+                    <button id="cent2" class="wordCss" onclick="">Player 2</button>
 
                     <button class="wordCss" id="w2" onclick="word2()">Word 1:&nbsp;&nbsp;</button>
                     <button class="wordCss" id="w4" onclick="word4()">Word 2:&nbsp;&nbsp;</button>
