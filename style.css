@@ -140,3 +140,7 @@
     flex-direction: column;
     width: fit-content; 
 }
+
+#pic{
+    z-index: 100;
+}

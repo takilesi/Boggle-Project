@@ -8,9 +8,6 @@ const words3 = "goat, gun, hair, hammer, hand, hat, head, heart, hook, horn, hor
 
 let words4 = "aba,abs,ace,act,add,ado,aft,age,ago,aha,aid,aim,air,ala,ale,all,alt,amp,ana,and,ant,any,ape,app,apt,arc,are,ark,arm,art,ash,ask,asp,ass,ate,ave,awe,axe,aye,BAA,bad,bag,ban,bar,bat,bay,bed,bee,beg,bel,ben,bet,bid,big,bin,bio,bis,bit,biz,bob,bog,boo,bow,box,boy,bra,bud,Bug,bum,bun,bus,but,buy,bye,cab,cad,cam,can,cap,car,cat,chi,cob,cod,col,con,coo,cop,cor,cos,cot,cow,cox,coy,cry,cub,cue,cum,cup,cut,dab,dad,dal,dam,dan,day,Dee,def,del,den,dew,did,die,dig,dim,din,dip,dis,doc,doe,dog,don,dot,dry,dub,due,dug,dun,duo,dye,ear,eat,ebb,ecu,eft,egg,ego,elf,elm,emu,end,era,eta,eve,eye,fab,fad,fan,far,fat,fax,fay,fed,fee,fen,few,fig,fin,fir,fit,fix,flu,fly,foe,fog,for,fox,fry,fun,fur,gag,gal,gap,gas,gay,gee,gel,gem,get,gig,gin,god,got,gum,gun,gut,guy,gym,had,ham,has,hat,hay,hem,hen,her,hey,hid,him,hip,his,hit,hog,hon,hop,hot,how,hub,hue,hug,huh,hum,hut,ice,icy,igg,ill,imp,ink,inn,ion,its,ivy,jam,jar,jaw,jay,jet,jew,job,joe,jog,joy,jug,jun,kay,ken,key,kid,kin,kit,lab,lac,lad,lag,lam,lap,law,lax,lay,lea,led,Lee,leg,les,let,lib,lid,lie,lip,lit,log,lot,low,mac,mad,mag,man,map,mar,mas,mat,max,may,med,meg,men,Met,mid,mil,mix,mob,mod,mol,mom,mon,mop,mot,mud,mug,mum,nab,nah,nan,nap,nay,neb,neg,net,new,nil,nip,nod,nor,nos,not,now,nun,nut,oak,odd,off,oft,oil,old,ole,one,ooh,opt,orb,ore,our,out,owe,owl,own,pac,pad,pal,pam,pan,pap,par,pas,pat,paw,pay,pea,peg,pen,pep,per,pet,pew,phi,pic,pie,pig,pin,pip,pit,ply,pod,pol,pop,pot,pro,psi,pub,pup,put,rad,rag,raj,ram,ran,rap,rat,raw,ray,red,ref,reg,rem,rep,rev,rib,rid,rig,rim,rip,rob,rod,roe,rot,row,rub,rue,rug,rum,run,rye,sab,sac,sad,sae,sag,sal,sap,sat,saw,say,sea,sec,see,sen,set,sew,sex,she,shy,sic,sim,sin,sip,sir,sis,sit,six,ski,sky,sly,sod,sol,son,sow,soy,spa,spy,sub,sue,sum,sun,sup,tab,tad,tag,tam,tan,tap,tar,tat,tax,tea,ted,tee,ten,the,thy,tie,tin,tip,tod,toe,tom,ton,too,top,tor,tot,tow,toy,try,tub,tug,two,use,van,vat,vet,via,vie,vow,wan,war,was,wax,way,web,wed,wee,wet,who,why,wig,win,wis,wit,won,woo,wow,wry,wye,yen,yep,yes,yet,you,zip,zoo"; 
 
-
-
-
 // input player names
 
 const player = {
@@ -116,7 +113,28 @@ const p2 = {
 
 // use roll() to create 16 weighted random letters for the 4x4 gameboard matrix and the fourBy4 js object
 //
+
+const clearTheBoard = () => {
+    document.getElementById("cent1").innerHTML = "Player 1"; 
+    document.getElementById("cent2").innerHTML = "Player 2"; 
+    let id = ""; 
+    j = 1;
+    k = 1; 
+    for (let i=1; i<=20; i++){
+        id = `w${i}`
+        if (i%2==0){
+            document.getElementById(id).innerHTML = "Word " + j + ":";  
+            j++; 
+        } else {
+            document.getElementById(id).innerHTML = "Word " + k + ":";  
+            k++; 
+        }
+    }
+}
+
+
 const roll = () => {
+    clearTheBoard(); 
     for (i=1; i<17; i++){
 
         let letterTemp = fixQ(); 
@@ -248,18 +266,17 @@ const let16 = () => { tempWord += fourBy4.letter16; }
 //
 const scoreWord = (tempWord) => {
     if (tempWord.length == 4 || tempWord.length == 3) {
-        return 1; 
+        return " - " + 1 + "&nbsp;point"; 
     } else if (tempWord.length == 5){
-        return 2; 
+        return " - " + 2 + "&nbsp;points"; 
     } else if (tempWord.length == 6){
-        return 3; 
+        return " - " + 3 + "&nbsp;points"; 
     } else if (tempWord.length == 7){
-        return 5; 
+        return " - " + 5 + "&nbsp;points"; 
     } else if (tempWord.length >= 8){
-        return 11; 
+        return " - " + 11 + "&nbsp;points"; 
     }
 }
-
 
 // const words1 = "set, get, bet, met, net, let, pet, vet, wet, yet"; 
 // const words2 = "ban, can, fan, lan, man, pan, ran, tan, van"; 
@@ -276,9 +293,10 @@ const spellCheck = (verifyWord) => {
     let check3 = wordArray3.includes(verifyWordLowerCase);
     let check4 = wordArray4.includes(verifyWordLowerCase);
     if (check1==true || check2==true || check3==true || check4==true){
-        return verifyWord; 
+        let scoreIt = scoreWord(verifyWord); 
+        return verifyWord + scoreIt; 
     } else if(check1==false && check2==false && check3==false && check4==false){
-        verifyWord = "not in 850-wrd-dict: try again"; 
+        verifyWord = "not in 850 word dict: try again"; 
         return verifyWord; 
     }
     
@@ -291,7 +309,7 @@ const word1 = () => {
     let w = document.getElementById("w1");
     w.innerHTML = str; 
 
-    w.innerHTML += spellCheck(tempWord) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;" + scoreWord(tempWord) + " pts"; 
+    w.innerHTML += spellCheck(tempWord);  
     p1.word1 = tempWord; 
     tempWord = ""; 
 }
@@ -301,7 +319,7 @@ const word2 = () => {
     let w = document.getElementById("w2");
     w.innerHTML = str;
 
-    w.innerHTML += spellCheck(tempWord) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;" + scoreWord(tempWord) + " pts"; 
+    w.innerHTML += spellCheck(tempWord); 
     p2.word1 = tempWord; 
     tempWord = ""; 
 }
@@ -310,7 +328,7 @@ const word3 = () => {
     let str = "Word 2:  "; 
     let w = document.getElementById("w3"); 
     w.innerHTML = str;
-    w.innerHTML += tempWord + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;" + scoreWord(tempWord) + " pts"; 
+    w.innerHTML += spellCheck(tempWord);
     p1.word2 = tempWord; 
     tempWord = ""; 
 }
@@ -319,7 +337,7 @@ const word4 = () => {
     let str = "Word 2:  ";
     let w = document.getElementById("w4"); 
     w.innerHTML = str;
-    w.innerHTML += tempWord + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;" + scoreWord(tempWord) + " pts"; 
+    w.innerHTML += spellCheck(tempWord); 
     p2.word2 = tempWord; 
     tempWord = ""; 
 }
@@ -328,7 +346,7 @@ const word5 = () => {
     let str = "Word 3:  ";
     let w = document.getElementById("w5"); 
     w.innerHTML = str;
-    w.innerHTML += tempWord + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;" + scoreWord(tempWord) + " pts"; 
+    w.innerHTML += spellCheck(tempWord); 
     p1.word3 = tempWord; 
     tempWord = ""; 
 }
@@ -337,7 +355,7 @@ const word6 = () => {
     let str = "Word 3:  ";
     let w = document.getElementById("w6"); 
     w.innerHTML = str;
-    w.innerHTML += tempWord + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;" + scoreWord(tempWord) + " pts"; 
+    w.innerHTML += spellCheck(tempWord);
     p2.word3 = tempWord; 
     tempWord = ""; 
 }
@@ -346,7 +364,7 @@ const word7 = () => {
     let str = "Word 4:  ";
     let w = document.getElementById("w7"); 
     w.innerHTML = str;
-    w.innerHTML += tempWord + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;" + scoreWord(tempWord) + " pts";
+    w.innerHTML += spellCheck(tempWord);
     p1.word4 = tempWord;  
     tempWord = ""; 
 }
@@ -355,7 +373,7 @@ const word8 = () => {
     let str = "Word 4:  ";
     let w = document.getElementById("w8"); 
     w.innerHTML = str;
-    w.innerHTML += tempWord + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;" + scoreWord(tempWord) + " pts"; 
+    w.innerHTML += spellCheck(tempWord); 
     p2.word4 = tempWord; 
     tempWord = ""; 
 }
@@ -364,7 +382,7 @@ const word9 = () => {
     let str = "Word 5:  ";
     let w = document.getElementById("w9"); 
     w.innerHTML = str;
-    w.innerHTML += tempWord + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;" + scoreWord(tempWord) + " pts"; 
+    w.innerHTML += spellCheck(tempWord);
     p1.word5 = tempWord; 
     tempWord = ""; 
 }
@@ -373,7 +391,7 @@ const word10 = () => {
     let str = "Word 5:  ";
     let w = document.getElementById("w10"); 
     w.innerHTML = str;
-    w.innerHTML += tempWord + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;" + scoreWord(tempWord) + " pts"; 
+    w.innerHTML += spellCheck(tempWord); 
     p2.word5 = tempWord; 
     tempWord = ""; 
 }
@@ -384,7 +402,7 @@ const word11 = () => {
     let str = "Word 6:  ";
     let w = document.getElementById("w11"); 
     w.innerHTML = str;
-    w.innerHTML += tempWord + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;" + scoreWord(tempWord) + " pts"; 
+    w.innerHTML += spellCheck(tempWord); 
     p1.word6 = tempWord; 
     tempWord = ""; 
 }
@@ -393,7 +411,7 @@ const word12 = () => {
     let str = "Word 6:  ";
     let w = document.getElementById("w12")
     w.innerHTML = str;
-    w.innerHTML += tempWord + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;" + scoreWord(tempWord) + " pts"; 
+    w.innerHTML += spellCheck(tempWord); 
     p2.word6 = tempWord; 
     tempWord = ""; 
 }
@@ -402,7 +420,7 @@ const word13 = () => {
     let str = "Word 7:  ";
     let w = document.getElementById("w13")
     w.innerHTML = str;
-    w.innerHTML += tempWord + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;" + scoreWord(tempWord) + " pts"; 
+    w.innerHTML += spellCheck(tempWord); 
     p1.word7 = tempWord; 
     tempWord = ""; 
 }
@@ -411,7 +429,7 @@ const word14 = () => {
     let str = "Word 7:  ";
     let w = document.getElementById("w14"); 
     w.innerHTML = str;
-    w.innerHTML += tempWord + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;" + scoreWord(tempWord) + " pts"; 
+    w.innerHTML += spellCheck(tempWord); 
     p2.word7 = tempWord; 
     tempWord = ""; 
 }
@@ -420,7 +438,7 @@ const word15 = () => {
     let str = "Word 8:  ";
     let w = document.getElementById("w15"); 
     w.innerHTML = str;
-    w.innerHTML += tempWord + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;" + scoreWord(tempWord) + " pts"; 
+    w.innerHTML += spellCheck(tempWord); 
     p1.word8 = tempWord; 
     tempWord = ""; 
 }
@@ -429,7 +447,7 @@ const word16 = () => {
     let str = "Word 8:  ";
     let w = document.getElementById("w16"); 
     w.innerHTML = str;
-    w.innerHTML += tempWord + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;" + scoreWord(tempWord) + " pts"; 
+    w.innerHTML += spellCheck(tempWord); 
     p2.word8 = tempWord; 
     tempWord = ""; 
 }
@@ -438,7 +456,7 @@ const word17 = () => {
     let str = "Word 9:  ";
     let w = document.getElementById("w17");
     w.innerHTML = str;
-    w.innerHTML += tempWord + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;" + scoreWord(tempWord) + " pts";
+    w.innerHTML += spellCheck(tempWord);
     p1.word9 = tempWord;  
     tempWord = ""; 
 }
@@ -447,7 +465,7 @@ const word18 = () => {
     let str = "Word 9:  ";
     let w = document.getElementById("w18");
     w.innerHTML = str;
-    w.innerHTML += tempWord + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;" + scoreWord(tempWord) + " pts"; 
+    w.innerHTML += spellCheck(tempWord); 
     p2.word9 = tempWord; 
     tempWord = ""; 
 }
@@ -456,7 +474,7 @@ const word19 = () => {
     let str = "Word 10:  ";
     let w = document.getElementById("w19");
     w.innerHTML = str;
-    w.innerHTML += tempWord + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;" + scoreWord(tempWord) + " pts"; 
+    w.innerHTML += spellCheck(tempWord); 
     p1.word10 = tempWord; 
     tempWord = ""; 
 }
@@ -465,7 +483,7 @@ const word20 = () => {
     let str = "Word 10:  ";
     let w = document.getElementById("w20")
     w.innerHTML = str;
-    w.innerHTML += tempWord + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;" + scoreWord(tempWord) + " pts"; 
+    w.innerHTML += spellCheck(tempWord); 
     p2.word10 = tempWord; 
     tempWord = ""; 
 }
