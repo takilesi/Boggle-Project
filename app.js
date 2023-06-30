@@ -133,8 +133,18 @@ const clearTheBoard = () => {
 }
 
 
+const clearLetterBackground = () => {
+    for (let i=5; i<=12; i++) {
+        letterId = `l${j}`; 
+        document.getElementById(letterId).style.backgroundImage = "none";
+        // document.getElementById(letterId).style.backgroundImage = linear-gradient(rgb(186, 148, 148), rgb(244, 244, 235));
+    }    
+}
+
+
 const roll = () => {
     clearTheBoard(); 
+    clearLetterBackground(); 
     for (i=1; i<17; i++){
 
         let letterTemp = fixQ(); 
@@ -181,6 +191,26 @@ const test1 = () => {
 // tally players scores (gn - getNum)
 //  use odd and evens of id="w1"..."w20"
 //
+ 
+const gameOver = () => {
+    let colorArray = ["coral","orange","yellow","chartreuse","darkseagreen","cyan","dodgerblue","violet"]
+    let myLetterArray = ["G","A","M","E","O","V","E","R"]
+    let letterId = "";
+
+    for (let i=0; i<=7; i++) {
+        delay(i); 
+    }    
+
+    function delay (i) {
+        setTimeout(() => {
+            j = i+5; 
+            letterId = `l${j}`;
+            document.getElementById(letterId).innerHTML = myLetterArray[i]; 
+            document.getElementById(letterId).style.backgroundImage = "none";
+            document.getElementById(letterId).style.backgroundColor = colorArray[i]; 
+        }, i*500);
+    }
+}
 
 const tally = () => {
     leftTally  = 0; 
@@ -210,6 +240,7 @@ const tally = () => {
     }
     document.getElementById("cent1").innerHTML = "Player 1 score tally: " + leftTally; 
     document.getElementById("cent2").innerHTML = "Player 2 score tally: " + rightTally; 
+    gameOver(); 
 }
 
 const test2 = () => {
@@ -278,9 +309,6 @@ const scoreWord = (tempWord) => {
     }
 }
 
-// const words1 = "set, get, bet, met, net, let, pet, vet, wet, yet"; 
-// const words2 = "ban, can, fan, lan, man, pan, ran, tan, van"; 
-
 let wordArray1 = words1.split(", "); 
 let wordArray2 = words2.split(", "); 
 let wordArray3 = words3.split(", "); 
@@ -308,7 +336,6 @@ const word1 = () => {
     let str = "Word 1:  "; 
     let w = document.getElementById("w1");
     w.innerHTML = str; 
-
     w.innerHTML += spellCheck(tempWord);  
     p1.word1 = tempWord; 
     tempWord = ""; 
@@ -318,7 +345,6 @@ const word2 = () => {
     let str = "Word 1:  ";
     let w = document.getElementById("w2");
     w.innerHTML = str;
-
     w.innerHTML += spellCheck(tempWord); 
     p2.word1 = tempWord; 
     tempWord = ""; 
