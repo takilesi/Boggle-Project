@@ -135,12 +135,15 @@ const clearTheBoard = () => {
 
 const clearLetterBackground = () => {
     for (let i=5; i<=12; i++) {
-        letterId = `l${j}`; 
+        letterId = `l${i}`; 
         document.getElementById(letterId).style.backgroundImage = "none";
         // document.getElementById(letterId).style.backgroundImage = linear-gradient(rgb(186, 148, 148), rgb(244, 244, 235));
+
+        document.getElementById(letterId).style.background = "linear-gradient(rgb(194, 187, 187), rgb(244, 244, 235)";
     }    
 }
 
+// document.getElementById(letterId).style.background = "linear-gradient(to right, rgb(186, 148, 148), rgb(244, 244, 235)";
 
 const roll = () => {
     clearTheBoard(); 
