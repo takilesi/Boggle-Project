@@ -117,10 +117,11 @@
 
 .bothPlayersWordsInner{
     display: flex; 
+    justify-content: space-around;
 }
 
 .leftPlayer, .rightPlayer{
-    width: 50vw; 
+    width: 44vw; 
     height: fit-content;
     border: solid purple; 
     display: flex; 
@@ -133,7 +134,7 @@
     font-size: 20px;
     padding: 2px; 
     margin-top: 5px; 
-    margin-left: 5px;
+    margin-left: 15px;
 }
 .test1, .test2, .test3{
     display: flex;
