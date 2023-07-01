@@ -284,8 +284,23 @@ const test4 = () => {
 //
 let tempWord = ""; 
 
-const let1 = () => { tempWord += fourBy4.letter1; }
-const let2 = () => { tempWord += fourBy4.letter2; }
+
+
+
+
+// functioning event listener 
+// document.addEventListener("click", function(){
+//     usableCells();
+//     document.getElementById("l1").innerHTML = "Hello World";
+//     document.getElementById("l2").disabled = true;
+// });
+
+
+const let1 = () => {
+    tempWord += fourBy4.letter1; 
+    setGrid("l1"); 
+}
+function let2() { tempWord += fourBy4.letter2; }
 const let3 = () => { tempWord += fourBy4.letter3; }
 const let4 = () => { tempWord += fourBy4.letter4; }
 const let5 = () => { tempWord += fourBy4.letter5; }
@@ -592,99 +607,141 @@ const fixQ = () => {
     return genRanLetFixQ
 }
 
-// code borrowed from 
-// Ha, I had to fill out the entire grid!!!
+
+// document.getElementById("Button").disabled = true;
+// document.getElementById("Button").disabled = false;
+
+
+const setGrid = (cellClickedOn) => {
+    // loop through all 
+    for (let i=0; i<grid.length; i++){
+        // console.log(grid[i].id); 
+        if (  grid[i].id == cellClickedOn ){
+            console.log("here is the tile cell we are in: " + grid[i].id);
+            for (let j=0; j<grid[i].adjacentCells.length; j++) {
+                console.log("the cells to set to active: " + grid[i].adjacentCells[j]); 
+                let t = grid[i].adjacentCells[j]; // now have a single adjacent cell (t - test)
+                let tal = t.replace('l',''); // now have number of cell (tal - take away 'l')
+                let talm1 = tal - 1;           // now have the array index for cell (tal minus 1)
+                grid[talm1].active = true;    
+            }
+        }
+    }
+    // now i should have true for adjacent cells to cellClickedOn
+    for (let i=0; i<16; i++){
+        if (grid[i].active != true){
+            document.getElementById(grid[i].id).disabled = true;
+        }
+    }
+}
+
+
+// idea for structure of array containing objects comes from: 
 //https://stackoverflow.com/questions/72965791/how-to-check-in-a-css-grid-if-the-adjacent-cell-has-a-class
 //
 
-// const grid = [
-//     // first row 
-//     { 
-//         adjacentCells: ['l2', 'l5', 'l6'],
-//         cell: l1, //DOM element
-//         id: 'l1',
-//     },
-//     {
-//         adjacentCells: ['l1', 'l3', 'l5', 'l6', 'l7'],
-//         cell: l2,
-//         id: 'l2',
-//     },
-//     { 
-//         adjacentCells: ['l2', 'l4', 'l6', 'l7', 'l8'],
-//         cell: l3, //DOM element
-//         id: 'l3',
-//     },
-//     {
-//         adjacentCells: ['l3', 'l7', 'l8'],
-//         cell: l4,
-//         id: 'l4',
-//     },
-//     // second row 
-//     { 
-//         adjacentCells: ['l1', 'l2', 'l6', 'l9', 'l10'],
-//         cell: l5, //DOM element
-//         id: 'l5',
-//     },
-//     {
-//         adjacentCells: ['l1', 'l2', 'l3', 'l5', 'l7', 'l9', 'l10', 'l11'],
-//         cell: l6,
-//         id: 'l6',
-//     },
-//     { 
-//         adjacentCells: ['l2', 'l3', 'l4', 'l6', 'l8', 'l10', 'l11', 'l12'],
-//         cell: l7, //DOM element
-//         id: 'l7',
-//     },
-//     {
-//         adjacentCells: ['l3', 'l4', 'l7', 'l11', 'l12'],
-//         cell: l8,
-//         id: 'l8',
-//     },
-//     // third row 
-//     { 
-//         adjacentCells: ['l5', 'l6', 'l10', 'l13', 'l14'],
-//         cell: l9, //DOM element
-//         id: 'l9',
-//     },
-//     {
-//         adjacentCells: ['l5', 'l6', 'l7', 'l9', 'l11', 'l13', 'l14', 'l15'],
-//         cell: l10,
-//         id: 'l10',
-//     },
-//     { 
-//         adjacentCells: ['l6', 'l7', 'l8', 'l10', 'l12', 'l14', 'l15', 'l16'],
-//         cell: l11, //DOM element
-//         id: 'l11',
-//     },
-//     {
-//         adjacentCells: ['l7', 'l8', 'l11', 'l15', 'l16'],
-//         cell: l12,
-//         id: 'l12',
-//     },
-//     // fourth row 
-//     { 
-//         adjacentCells: ['l9', 'l10', 'l14'],
-//         cell: l13, //DOM element
-//         id: 'l13',
-//     },
-//     {
-//         adjacentCells: ['l9', 'l10', 'l11', 'l13', 'l15'],
-//         cell: l14,
-//         id: 'l14',
-//     },
-//     { 
-//         adjacentCells: ['l10', 'l11', 'l12', 'l14', 'l16'],
-//         cell: l5, //DOM element
-//         id: 'l5',
-//     },
-//     {
-//         adjacentCells: ['l11', 'l12', 'l15'],
-//         cell: l16,
-//         id: 'l16',
-//     },
-//   ]
-
-
+const grid = [
+    // first row 
+    { 
+        adjacentCells: ['l2', 'l5', 'l6'],
+        // cell: l1, //DOM element
+        id: 'l1',
+        active: false,
+    },
+    {
+        adjacentCells: ['l1', 'l3', 'l5', 'l6', 'l7'],
+        // cell: l2,
+        id: 'l2',
+        active: false,
+    },
+    { 
+        adjacentCells: ['l2', 'l4', 'l6', 'l7', 'l8'],
+        // cell: l3, //DOM element
+        id: 'l3',
+        active: false,
+    },
+    {
+        adjacentCells: ['l3', 'l7', 'l8'],
+        // cell: l4,
+        id: 'l4',
+        active: false,
+    },
+    // second row 
+    { 
+        adjacentCells: ['l1', 'l2', 'l6', 'l9', 'l10'],
+        // cell: l5, //DOM element
+        id: 'l5',
+        active: false,
+    },
+    {
+        adjacentCells: ['l1', 'l2', 'l3', 'l5', 'l7', 'l9', 'l10', 'l11'],
+        // cell: l6,
+        id: 'l6',
+        active: false,
+    },
+    { 
+        adjacentCells: ['l2', 'l3', 'l4', 'l6', 'l8', 'l10', 'l11', 'l12'],
+        // cell: l7, //DOM element
+        id: 'l7',
+        active: false,
+    },
+    {
+        adjacentCells: ['l3', 'l4', 'l7', 'l11', 'l12'],
+        // cell: l8,
+        id: 'l8',
+        active: false,
+    },
+    // third row 
+    { 
+        adjacentCells: ['l5', 'l6', 'l10', 'l13', 'l14'],
+        // cell: l9, //DOM element
+        id: 'l9',
+        active: false,
+    },
+    {
+        adjacentCells: ['l5', 'l6', 'l7', 'l9', 'l11', 'l13', 'l14', 'l15'],
+        // cell: l10,
+        id: 'l10',
+        active: false,
+    },
+    { 
+        adjacentCells: ['l6', 'l7', 'l8', 'l10', 'l12', 'l14', 'l15', 'l16'],
+        // cell: l11, //DOM element
+        id: 'l11',
+        active: false,
+    },
+    {
+        adjacentCells: ['l7', 'l8', 'l11', 'l15', 'l16'],
+        // cell: l12,
+        id: 'l12',
+        active: false,
+    },
+    // fourth row 
+    { 
+        adjacentCells: ['l9', 'l10', 'l14'],
+        // cell: l13, //DOM element
+        id: 'l13',
+        active: false,
+    },
+    {
+        adjacentCells: ['l9', 'l10', 'l11', 'l13', 'l15'],
+        // cell: l14,
+        id: 'l14',
+        active: false,
+    },
+    { 
+        adjacentCells: ['l10', 'l11', 'l12', 'l14', 'l16'],
+        // cell: l5, //DOM element
+        id: 'l15',
+        active: false,
+    },
+    {
+        adjacentCells: ['l11', 'l12', 'l15'],
+        // cell: l16,
+        id: 'l16',
+        active: false,
+    },
+]
 
 
 

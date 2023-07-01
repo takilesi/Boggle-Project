@@ -1,133 +1,140 @@
 // will need to add event listener so I know which tile has been clicked
 
 const grid = [
-    { 
-        adjacentCells: [],
-        // dummy values, don't want to deal with grid[0]
-        id: 'l0',
-        dead: false,
-    },
     // first row 
     { 
         adjacentCells: ['l2', 'l5', 'l6'],
         // cell: l1, //DOM element
         id: 'l1',
-        dead: false,
+        active: false,
     },
     {
         adjacentCells: ['l1', 'l3', 'l5', 'l6', 'l7'],
         // cell: l2,
         id: 'l2',
-        dead: false,
+        active: false,
     },
     { 
         adjacentCells: ['l2', 'l4', 'l6', 'l7', 'l8'],
         // cell: l3, //DOM element
         id: 'l3',
-        dead: false,
+        active: false,
     },
     {
         adjacentCells: ['l3', 'l7', 'l8'],
         // cell: l4,
         id: 'l4',
-        dead: false,
+        active: false,
     },
     // second row 
     { 
         adjacentCells: ['l1', 'l2', 'l6', 'l9', 'l10'],
         // cell: l5, //DOM element
         id: 'l5',
-        dead: false,
+        active: false,
     },
     {
         adjacentCells: ['l1', 'l2', 'l3', 'l5', 'l7', 'l9', 'l10', 'l11'],
         // cell: l6,
         id: 'l6',
-        dead: false,
+        active: false,
     },
     { 
         adjacentCells: ['l2', 'l3', 'l4', 'l6', 'l8', 'l10', 'l11', 'l12'],
         // cell: l7, //DOM element
         id: 'l7',
-        dead: false,
+        active: false,
     },
     {
         adjacentCells: ['l3', 'l4', 'l7', 'l11', 'l12'],
         // cell: l8,
         id: 'l8',
-        dead: false,
+        active: false,
     },
     // third row 
     { 
         adjacentCells: ['l5', 'l6', 'l10', 'l13', 'l14'],
         // cell: l9, //DOM element
         id: 'l9',
-        dead: false,
+        active: false,
     },
     {
         adjacentCells: ['l5', 'l6', 'l7', 'l9', 'l11', 'l13', 'l14', 'l15'],
         // cell: l10,
         id: 'l10',
-        dead: false,
+        active: false,
     },
     { 
         adjacentCells: ['l6', 'l7', 'l8', 'l10', 'l12', 'l14', 'l15', 'l16'],
         // cell: l11, //DOM element
         id: 'l11',
-        dead: false,
+        active: false,
     },
     {
         adjacentCells: ['l7', 'l8', 'l11', 'l15', 'l16'],
         // cell: l12,
         id: 'l12',
-        dead: false,
+        active: false,
     },
     // fourth row 
     { 
         adjacentCells: ['l9', 'l10', 'l14'],
         // cell: l13, //DOM element
         id: 'l13',
-        dead: false,
+        active: false,
     },
     {
         adjacentCells: ['l9', 'l10', 'l11', 'l13', 'l15'],
         // cell: l14,
         id: 'l14',
-        dead: false,
+        active: false,
     },
     { 
         adjacentCells: ['l10', 'l11', 'l12', 'l14', 'l16'],
         // cell: l5, //DOM element
         id: 'l15',
-        dead: false,
+        active: false,
     },
     {
         adjacentCells: ['l11', 'l12', 'l15'],
         // cell: l16,
         id: 'l16',
-        dead: false,
+        active: false,
     },
-  ]
+]
 
-// event listener sets cellClickedOn
+
 let cellClickedOn = "l1";  
 
 let alreadyUsedCells = []; 
-// call this function each time a tile is clicked to 
-// update which tiles can be used to make given word
-//
+let i = 0; 
+
+// if ( grid[i].id == cellClickedOn ){
+//     console.log(grid[i].id); 
+// } else {
+//     console.log("we got nothing"); 
+// }
+
 const setGrid = () => {
-    // set clicked tile to dead
-    for (let i=1; i<=16; i++){
-        if (grid[i].id == cellClickedOn){
-            grid[i].dead = true; 
-            alreadyUsedCells.push(cellClickedOn);
-            console.log(grid[i].dead); 
+    // loop through all 
+    for (let i=0; i<grid.length; i++){
+        // console.log(grid[i].id); 
+        if (  grid[i].id == cellClickedOn ){
+            console.log("here is the tile cell we are in: " + grid[i].id);
+            for (let j=0; j<grid[i].adjacentCells.length; j++) {
+                console.log("the cells to set to active: " + grid[i].adjacentCells[j]); 
+                let t = grid[i].adjacentCells[j]; // now have a single adjacent cell (t - test)
+                let tal = t.replace('l',''); // now have number of cell (tal - take away 'l')
+                let talm1 = tal - 1;           // now have the array index for cell (tal minus 1)
+                grid[talm1].active = true;    
+            }
         }
     }
-    console.log(alreadyUsedCells);
-
 }
 
-setGrid(); 
- 
+setGrid();
+
+
+for (let ii=0; ii<grid.length; ii++) {
+    console.log(grid[ii].id + " is active " + grid[ii].active); 
+}
