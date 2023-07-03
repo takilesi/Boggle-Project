@@ -107,6 +107,15 @@ const grid = [
 let cellClickedOn = "l1";  
 
 let alreadyUsedCells = []; 
+
+alreadyUsedCells.push(cellClickedOn); 
+
+
+
+
+    // now I disable the html elements that are not adjacent to the clicked cell
+
+
 let i = 0; 
 
 // if ( grid[i].id == cellClickedOn ){
@@ -123,10 +132,10 @@ const setGrid = () => {
             console.log("here is the tile cell we are in: " + grid[i].id);
             for (let j=0; j<grid[i].adjacentCells.length; j++) {
                 console.log("the cells to set to active: " + grid[i].adjacentCells[j]); 
-                let t = grid[i].adjacentCells[j]; // now have a single adjacent cell (t - test)
-                let tal = t.replace('l',''); // now have number of cell (tal - take away 'l')
-                let talm1 = tal - 1;           // now have the array index for cell (tal minus 1)
-                grid[talm1].active = true;    
+                let test = grid[i].adjacentCells[j];
+                let removeL = test.replace('l',''); // now have number of cell
+                let removeLm1 = removeL - 1; // now have the array index for cell (removeL minus 1)
+                grid[removeLm1].active = true;    
             }
         }
     }
