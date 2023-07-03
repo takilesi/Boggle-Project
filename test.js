@@ -147,3 +147,37 @@ setGrid();
 for (let ii=0; ii<grid.length; ii++) {
     console.log(grid[ii].id + " is active " + grid[ii].active); 
 }
+// https://github.com/fuhton/piano-mp3/tree/master/piano-mp3
+
+
+// const synth = new Tone.Synth().toDestination();
+
+// //play a middle 'C' for the duration of an 8th note
+// synth.triggerAttackRelease("C4", "8n");
+
+
+// let beat = new Audio('https://cdn.freesound.org/previews/448/448617_9311684-lq.mp3');
+// beat.volume = 1; 
+// beat.play();
+
+
+
+const synth = new Tone.Synth().toDestination();
+
+//play a middle 'C' for the duration of an 8th note
+synth.triggerAttackRelease("C4", "8n");
+
+
+for (let i=0; i<=7; i++) {
+    delay(i); 
+}    
+
+function delay (i) {
+    setTimeout(() => {
+        j = i+5; 
+        letterId = `l${j}`;
+        document.getElementById(letterId).innerHTML = myLetterArray[i]; 
+        document.getElementById(letterId).style.backgroundImage = "none";
+        document.getElementById(letterId).style.backgroundColor = colorArray[i]; 
+    }, i*500);
+}

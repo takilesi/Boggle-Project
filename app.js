@@ -6,7 +6,7 @@ const words2 = "organization, ornament, owner, page, pain, paint, paper, part, p
 
 const words3 = "goat, gun, hair, hammer, hand, hat, head, heart, hook, horn, horse, hospital, house, island, jewel, kettle, key, knee, knife, knot, leaf, leg, library, line, lip, lock, map, match, monkey, moon, mouth, muscle, nail, neck, needle, nerve, net, nose, nut, office, orange, oven, parcel, pen, pencil, picture, pig, pin, pipe, plane, plate, plough, pocket, pot, potato, prison, pump, rail, rat, receipt, ring, rod, roof, root, sail, school, scissors, screw, seed, sheep, shelf, ship, shirt, shoe, skin, skirt, snake, sock, spade, sponge, spoon, spring, square, stamp, star, station, stem, stick, stocking, stomach, store, street, sun, table, tail, thread, throat, thumb, ticket, toe, tongue, tooth, town, train, tray, tree, trousers, umbrella, wall, watch, wheel, whip, whistle, window, wing, wire, worm, able, acid, angry, automatic, beautiful, black, boiling, bright, broken, brown, cheap, chemical, chief, clean, clear, common, complex, conscious, cut, deep, dependent, early, elastic, electric, equal, fat, fertile, first, fixed, flat, free, frequent, full, general, good, great, grey, hanging, happy, hard, healthy, high, hollow, important, kind, like, living, long, male, married, material, medical, military, natural, necessary, new, normal, open, parallel, past, physical, political, poor, possible, present, private, probable, quick, quiet, ready, red, regular, responsible, right, round, same, second, separate, serious, sharp, smooth, sticky, stiff, straight, strong, sudden, sweet, tall, thick, tight, tired, true, violent, waiting, warm, wet, wide, wise, yellow, young, awake, bad, bent, bitter, blue, certain, cold, complete, cruel, dark, dead, dear, delicate, different, dirty, dry, false, feeble, female, foolish, future, green, ill, last, late, left, loose, loud, low, mixed, narrow, old, opposite, public, rough, sad, safe, secret, short, shut, simple, slow, small, soft, solid, special, strange, thin, white, wrong";
 
-let words4 = "aba,abs,ace,act,add,ado,aft,age,ago,aha,aid,aim,air,ala,ale,all,alt,amp,ana,and,ant,any,ape,app,apt,arc,are,ark,arm,art,ash,ask,asp,ass,ate,ave,awe,axe,aye,BAA,bad,bag,ban,bar,bat,bay,bed,bee,beg,bel,ben,bet,bid,big,bin,bio,bis,bit,biz,bob,bog,boo,bow,box,boy,bra,bud,Bug,bum,bun,bus,but,buy,bye,cab,cad,cam,can,cap,car,cat,chi,cob,cod,col,con,coo,cop,cor,cos,cot,cow,cox,coy,cry,cub,cue,cum,cup,cut,dab,dad,dal,dam,dan,day,Dee,def,del,den,dew,did,die,dig,dim,din,dip,dis,doc,doe,dog,don,dot,dry,dub,due,dug,dun,duo,dye,ear,eat,ebb,ecu,eft,egg,ego,elf,elm,emu,end,era,eta,eve,eye,fab,fad,fan,far,fat,fax,fay,fed,fee,fen,few,fig,fin,fir,fit,fix,flu,fly,foe,fog,for,fox,fry,fun,fur,gag,gal,gap,gas,gay,gee,gel,gem,get,gig,gin,god,got,gum,gun,gut,guy,gym,had,ham,has,hat,hay,hem,hen,her,hey,hid,him,hip,his,hit,hog,hon,hop,hot,how,hub,hue,hug,huh,hum,hut,ice,icy,igg,ill,imp,ink,inn,ion,its,ivy,jam,jar,jaw,jay,jet,jew,job,joe,jog,joy,jug,jun,kay,ken,key,kid,kin,kit,lab,lac,lad,lag,lam,lap,law,lax,lay,lea,led,Lee,leg,les,let,lib,lid,lie,lip,lit,log,lot,low,mac,mad,mag,man,map,mar,mas,mat,max,may,med,meg,men,met,mid,mil,mix,mob,mod,mol,mom,mon,mop,mot,mud,mug,mum,nab,nah,nan,nap,nay,neb,neg,net,new,nil,nip,nod,nor,nos,not,now,nun,nut,oak,odd,off,oft,oil,old,ole,one,ooh,opt,orb,ore,our,out,owe,owl,own,pac,pad,pal,pam,pan,pap,par,pas,pat,paw,pay,pea,peg,pen,pep,per,pet,pew,phi,pic,pie,pig,pin,pip,pit,ply,pod,pol,pop,pot,pro,psi,pub,pup,put,rad,rag,raj,ram,ran,rap,rat,raw,ray,red,ref,reg,rem,rep,rev,rib,rid,rig,rim,rip,rob,rod,roe,rot,row,rub,rue,rug,rum,run,rye,sab,sac,sad,sae,sag,sal,sap,sat,saw,say,sea,sec,see,sen,set,sew,sex,she,shy,sic,sim,sin,sip,sir,sis,sit,six,ski,sky,sly,sod,sol,son,sow,soy,spa,spy,sub,sue,sum,sun,sup,tab,tad,tag,tam,tan,tap,tar,tat,tax,tea,ted,tee,ten,the,thy,tie,tin,tip,tod,toe,tom,ton,too,top,tor,tot,tow,toy,try,tub,tug,two,use,van,vat,vet,via,vie,vow,wan,war,was,wax,way,web,wed,wee,wet,who,why,wig,win,wis,wit,won,woo,wow,wry,wye,yap,yen,yep,yes,yet,you,zip,zoo"; 
+let words4 = "aba,abs,ace,act,add,ado,aft,age,ago,aha,aid,aim,air,ala,ale,all,alt,amp,ana,and,ant,any,ape,app,apt,arc,are,ark,arm,art,ash,ask,asp,ass,ate,ave,awe,axe,aye,BAA,bad,bag,ban,bar,bat,bay,bed,bee,beg,bel,ben,bet,bid,big,bin,bio,bis,bit,biz,bob,bog,boo,bow,box,boy,bra,bud,Bug,bum,bun,bus,but,buy,bye,cab,cad,cam,can,cap,car,cat,chi,cob,cod,col,con,coo,cop,cor,cos,cot,cow,cox,coy,cry,cub,cue,cum,cup,cut,dab,dad,dal,dam,dan,day,Dee,def,del,den,dew,did,die,dig,dim,din,dip,dis,doc,doe,dog,don,dot,dry,dub,due,dug,dun,duo,dye,ear,eat,ebb,ecu,eft,egg,ego,elf,elm,emu,end,era,eta,eve,eye,fab,fad,fan,far,fat,fax,fay,fed,fee,fen,few,fig,fin,fir,fit,fix,flu,fly,foe,fog,for,fox,fry,fun,fur,gag,gal,gap,gas,gay,gee,gel,gem,get,gig,gin,god,got,gum,gun,gut,guy,gym,had,ham,has,hat,hay,hem,hen,her,hey,hid,him,hip,his,hit,hog,hon,hop,hot,how,hub,hue,hug,huh,hum,hut,ice,icy,igg,ill,imp,ink,inn,ion,its,ivy,jam,jar,jaw,jay,jet,jew,job,joe,jog,joy,jug,jun,kay,ken,key,kid,kin,kit,lab,lac,lad,lag,lam,lap,law,lax,lay,lea,led,Lee,leg,les,let,lib,lid,lie,lip,lit,log,lot,low,mac,mad,mag,man,map,mar,mas,mat,max,may,med,meg,men,Met,mid,mil,mix,mob,mod,mol,mom,mon,mop,mot,mud,mug,mum,nab,nah,nan,nap,nay,neb,neg,net,new,nil,nip,nod,nor,nos,not,now,nun,nut,oak,odd,off,oft,oil,old,ole,one,ooh,opt,orb,ore,our,out,owe,owl,own,pac,pad,pal,pam,pan,pap,par,pas,pat,paw,pay,pea,peg,pen,pep,per,pet,pew,phi,pic,pie,pig,pin,pip,pit,ply,pod,pol,pop,pot,pro,psi,pub,pup,put,rad,rag,raj,ram,ran,rap,rat,raw,ray,red,ref,reg,rem,rep,rev,rib,rid,rig,rim,rip,rob,rod,roe,rot,row,rub,rue,rug,rum,run,rye,sab,sac,sad,sae,sag,sal,sap,sat,saw,say,sea,sec,see,sen,set,sew,sex,she,shy,sic,sim,sin,sip,sir,sis,sit,six,ski,sky,sly,sod,sol,son,sow,soy,spa,spy,sub,sue,sum,sun,sup,tab,tad,tag,tam,tan,tap,tar,tat,tax,tea,ted,tee,ten,the,thy,tie,tin,tip,tod,toe,tom,ton,too,top,tor,tot,tow,toy,try,tub,tug,two,use,van,vat,vet,via,vie,vow,wan,war,was,wax,way,web,wed,wee,wet,who,why,wig,win,wis,wit,won,woo,wow,wry,wye,yen,yep,yes,yet,you,zip,zoo"; 
 
 // input player names
 
@@ -151,9 +151,7 @@ const clearLetterBackground = () => {
 // document.getElementById(letterId).style.background = "linear-gradient(to right, rgb(186, 148, 148), rgb(244, 244, 235)";
 
 const roll = () => {
-
-    // set July 2 12:02
-    setToFalse();
+    enableAll(); 
     clearTheBoard(); 
     clearLetterBackground(); 
     for (i=1; i<17; i++){
@@ -299,6 +297,10 @@ let tempWord = "";
 // });
 
 
+// https://github.com/fuhton/piano-mp3/tree/master/piano-mp3
+
+
+
 const let1 =()=>{tempWord += fourBy4.letter1; setGrid("l1");}
 const let2 =()=>{tempWord += fourBy4.letter2; setGrid("l2");}
 const let3 =()=>{tempWord += fourBy4.letter3; setGrid("l3");}
@@ -355,7 +357,8 @@ const spellCheck = (verifyWord) => {
 
 
 const word1 = () => {
-     
+    enableAll(); 
+    alreadyUsedCells = [];
     let str = "Word 1:  "; 
     let w = document.getElementById("w1");
     w.innerHTML = str; 
@@ -365,6 +368,8 @@ const word1 = () => {
 }
 
 const word2 = () => {
+    enableAll(); 
+    alreadyUsedCells = [];
     let str = "Word 1:  ";
     let w = document.getElementById("w2");
     w.innerHTML = str;
@@ -374,6 +379,8 @@ const word2 = () => {
 }
 
 const word3 = () => {
+    enableAll(); 
+    alreadyUsedCells = [];
     let str = "Word 2:  "; 
     let w = document.getElementById("w3"); 
     w.innerHTML = str;
@@ -383,6 +390,8 @@ const word3 = () => {
 }
 
 const word4 = () => {
+    enableAll(); 
+    alreadyUsedCells = [];
     let str = "Word 2:  ";
     let w = document.getElementById("w4"); 
     w.innerHTML = str;
@@ -392,6 +401,8 @@ const word4 = () => {
 }
 
 const word5 = () => {
+    enableAll(); 
+    alreadyUsedCells = [];
     let str = "Word 3:  ";
     let w = document.getElementById("w5"); 
     w.innerHTML = str;
@@ -401,6 +412,8 @@ const word5 = () => {
 }
 
 const word6 = () => {
+    enableAll(); 
+    alreadyUsedCells = [];
     let str = "Word 3:  ";
     let w = document.getElementById("w6"); 
     w.innerHTML = str;
@@ -410,6 +423,8 @@ const word6 = () => {
 }
 
 const word7 = () => {
+    enableAll(); 
+    alreadyUsedCells = [];
     let str = "Word 4:  ";
     let w = document.getElementById("w7"); 
     w.innerHTML = str;
@@ -419,6 +434,8 @@ const word7 = () => {
 }
 
 const word8 = () => {
+    enableAll(); 
+    alreadyUsedCells = [];
     let str = "Word 4:  ";
     let w = document.getElementById("w8"); 
     w.innerHTML = str;
@@ -428,6 +445,8 @@ const word8 = () => {
 }
 
 const word9 = () => {
+    enableAll(); 
+    alreadyUsedCells = [];
     let str = "Word 5:  ";
     let w = document.getElementById("w9"); 
     w.innerHTML = str;
@@ -437,6 +456,8 @@ const word9 = () => {
 }
 
 const word10 = () => {
+    enableAll(); 
+    alreadyUsedCells = [];
     let str = "Word 5:  ";
     let w = document.getElementById("w10"); 
     w.innerHTML = str;
@@ -448,6 +469,8 @@ const word10 = () => {
 //  second half of words
 
 const word11 = () => {
+    enableAll(); 
+    alreadyUsedCells = [];
     let str = "Word 6:  ";
     let w = document.getElementById("w11"); 
     w.innerHTML = str;
@@ -457,6 +480,8 @@ const word11 = () => {
 }
 
 const word12 = () => {
+    enableAll(); 
+    alreadyUsedCells = [];
     let str = "Word 6:  ";
     let w = document.getElementById("w12")
     w.innerHTML = str;
@@ -466,6 +491,8 @@ const word12 = () => {
 }
 
 const word13 = () => {
+    enableAll(); 
+    alreadyUsedCells = [];
     let str = "Word 7:  ";
     let w = document.getElementById("w13")
     w.innerHTML = str;
@@ -475,6 +502,8 @@ const word13 = () => {
 }
 
 const word14 = () => {
+    enableAll(); 
+    alreadyUsedCells = [];
     let str = "Word 7:  ";
     let w = document.getElementById("w14"); 
     w.innerHTML = str;
@@ -484,6 +513,8 @@ const word14 = () => {
 }
 
 const word15 = () => {
+    enableAll(); 
+    alreadyUsedCells = [];
     let str = "Word 8:  ";
     let w = document.getElementById("w15"); 
     w.innerHTML = str;
@@ -493,6 +524,8 @@ const word15 = () => {
 }
 
 const word16 = () => {
+    enableAll(); 
+    alreadyUsedCells = [];
     let str = "Word 8:  ";
     let w = document.getElementById("w16"); 
     w.innerHTML = str;
@@ -502,6 +535,8 @@ const word16 = () => {
 }
 
 const word17 = () => {
+    enableAll(); 
+    alreadyUsedCells = [];
     let str = "Word 9:  ";
     let w = document.getElementById("w17");
     w.innerHTML = str;
@@ -511,6 +546,8 @@ const word17 = () => {
 }
 
 const word18 = () => {
+    enableAll(); 
+    alreadyUsedCells = [];
     let str = "Word 9:  ";
     let w = document.getElementById("w18");
     w.innerHTML = str;
@@ -520,6 +557,8 @@ const word18 = () => {
 }
 
 const word19 = () => {
+    enableAll(); 
+    alreadyUsedCells = [];
     let str = "Word 10:  ";
     let w = document.getElementById("w19");
     w.innerHTML = str;
@@ -529,6 +568,8 @@ const word19 = () => {
 }
 
 const word20 = () => {
+    enableAll(); 
+    alreadyUsedCells = [];
     let str = "Word 10:  ";
     let w = document.getElementById("w20")
     w.innerHTML = str;
@@ -611,40 +652,55 @@ const fixQ = () => {
 // document.getElementById("Button").disabled = true;
 // document.getElementById("Button").disabled = false;
 
-const setToFalse = () => {
-    for (i=0; i<16; i++){
-        grid[i].active = false;
-    }
-    // document.getElementById(grid[i].id).disabled = true;
-}
-
-
-
+let alreadyUsedCells = []; 
 const setGrid = (cellClickedOn) => {
+    enableAll(); 
     // loop through all 
-    
     for (let i=0; i<grid.length; i++){
-
+        // console.log(grid[i].id); 
         if (  grid[i].id == cellClickedOn ){
-            
+            console.log("here is the tile cell we are in: " + grid[i].id);
             for (let j=0; j<grid[i].adjacentCells.length; j++) {
-                
+                console.log("the cells to set to active: " + grid[i].adjacentCells[j]); 
                 let t = grid[i].adjacentCells[j]; // now have a single adjacent cell (t - test)
                 let tal = t.replace('l',''); // now have number of cell (tal - take away 'l')
                 let talm1 = tal - 1;           // now have the array index for cell (tal minus 1)
                 grid[talm1].active = true;    
             }
         }
+    } // now i should have true for adjacent cells to cellClickedOn
+  
+    // check already used cells 
+    for (i=0; i<16; i++) {
+        for (j=0; j<alreadyUsedCells.length; j++) {
+            if (grid[i].id == alreadyUsedCells[j]) {
+                grid[i].active = false; 
+            }
+        }
     }
-    // now i should have true for adjacent cells to cellClickedOn
-    // if grid[i].active not equal to true turn cells off 
+
+    setTrueActive(); 
+
+    alreadyUsedCells.push(cellClickedOn); 
+}
+
+const setTrueActive = () => {
     for (let i=0; i<16; i++){
         if (grid[i].active != true){
             document.getElementById(grid[i].id).disabled = true;
         }
     }
-    setToFalse(); 
 }
+ 
+const enableAll = () => {
+    for (let i=0; i<16; i++){
+        grid[i].active = false; 
+        document.getElementById(grid[i].id).disabled = false;
+        
+    }
+}
+
+
 
 
 // idea for structure of array containing objects comes from: 
@@ -753,7 +809,4 @@ const grid = [
         active: false,
     },
 ]
-
-
-
 

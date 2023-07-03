@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "typo-js-ts": "^2.0.4"
+    "tone": "^14.7.77"
   }
 }

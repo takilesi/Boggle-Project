@@ -154,17 +154,27 @@ const roll = () => {
     enableAll(); 
     clearTheBoard(); 
     clearLetterBackground(); 
-    for (i=1; i<17; i++){
 
-        let letterTemp = fixQ(); 
+    const synth = new Tone.Synth().toDestination();
+    const notesToPass =["A4","B4","Db5","D5","E5","Gb5","G5","A5",
+                        "B5","Db6","D6","E6","Gb6","G6","A6","B6","Db7","D7"]
+    for (let i=1; i<19; i++) {
+        delay(i); 
+    }  
 
-        let letterNumber = `l${i}`; 
-        document.getElementById(letterNumber).innerHTML = letterTemp;
+    function delay (i) {
+        setTimeout(() => {
+            synth.triggerAttackRelease(notesToPass[i-1], "64n");
+            // fixQ() -get a weighted randomized letter from alphabet
+            let letterTemp = fixQ(); 
 
-        // push to fourBy4 object 
-        let objectLetterNumber = `letter${i}`
-
-        fourBy4[objectLetterNumber] = letterTemp;                 
+            let letterNumber = `l${i}`; 
+            document.getElementById(letterNumber).innerHTML = letterTemp;
+            // push to fourBy4 object 
+            let objectLetterNumber = `letter${i}`
+            fourBy4[objectLetterNumber] = letterTemp;  
+            
+        }, i*50);
     }
 }
 
@@ -295,6 +305,10 @@ let tempWord = "";
 //     document.getElementById("l1").innerHTML = "Hello World";
 //     document.getElementById("l2").disabled = true;
 // });
+
+
+// https://github.com/fuhton/piano-mp3/tree/master/piano-mp3
+
 
 
 const let1 =()=>{tempWord += fourBy4.letter1; setGrid("l1");}
