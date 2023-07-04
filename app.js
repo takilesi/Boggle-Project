@@ -272,10 +272,10 @@ const test3 = () => {
 
 const test4 = () => {
     let t = document.querySelector(".test4"); 
-    if (t.innerHTML=="temp word check"){
+    if (t.innerHTML=="Current Word:"){
         t.innerHTML += ": " + tempWord; 
     } else {
-        t.innerHTML="temp word check"; 
+        t.innerHTML="Current Word:"; 
     }  
 }
 

@@ -1,29 +1,16 @@
-#size{
-    font-size: 1.5em;
-    margin-left: 2em; 
-    margin-right: 2em;
-    margin-top: 1em;
-}
-.startAction{
-    /* height: 20px;  */
-    display: flex; 
-    justify-content: center;
-    font-size: 20px;
-
-}
-
-
-
-
-
-
 .outerLetterContainer{
-    height: 40vh; 
+    height: 50vh; 
     border: solid purple; 
     background-image: url(https://img.freepik.com/premium-photo/clear-blue-sky-sunset-with-horizon-calm-ocean-sea-background-picturesque_31965-138504.jpg);
     background-size: cover;
-
+    display: flex;
 }
+
+.innerLetterContainer{ 
+    width: 33vw; 
+    height: 50vh; 
+}
+
 .anotherContainer{
     /* width: 30em;
     border-color: black;
@@ -53,11 +40,7 @@
 
     font-style: bold;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.mispelled{
-    font-size: 30px;
-    background-color: red;
+    z-index: 10;
 }
 
 .letter{
@@ -69,7 +52,50 @@
     justify-content: center;
     font-size: 3em;
     background-image: linear-gradient(rgb(194, 187, 187), rgb(244, 244, 235));
+    z-index: 11;
 }
+
+
+
+
+
+
+
+#size{
+    font-size: 1.5em;
+    margin-left: 2em; 
+    margin-right: 2em;
+    margin-top: 1em;
+}
+.startAction{
+    /* height: 20px;  */
+    display: flex; 
+    flex-direction: column;
+    font-size: 20px;
+
+}
+
+
+
+#innerLeft{
+    display: flex; 
+    
+}
+
+
+
+
+
+
+
+
+
+.mispelled{
+    font-size: 30px;
+    background-color: red;
+}
+
+
 
 #cent1,#cent2{
     text-align: center;
@@ -107,33 +133,37 @@
 
 .bothPlayersWords{
     border: solid purple;
-    height: 50vh; 
+    height: 48vh; 
     /* border: solid blue;  */
    
     padding-right: 10px;
     background-image: url(https://i.pinimg.com/originals/f2/c4/ec/f2c4ec760a4282838f5a1ed7b134bb6a.jpg);
     background-size: cover;
+    z-index: 3;
 }
 
 .bothPlayersWordsInner{
     display: flex; 
-    justify-content: space-around;
+    justify-content: space-around; 
+    z-index: 2;
+    margin-top: 5px;
 }
 
 .leftPlayer, .rightPlayer{
-    width: 44vw; 
+    width: 40vw; 
     height: fit-content;
     border: solid purple; 
     display: flex; 
     flex-direction: column;
     margin: 3px; 
-    padding: 10px; 
+    padding: 5px; 
     background-image: linear-gradient(rgb(186, 148, 148), rgb(244, 244, 235));
+    z-index: 1;
 }
 #sized{
     font-size: 20px;
     padding: 2px; 
-    margin-top: 5px; 
+    margin-top: 30px; 
     margin-left: 15px;
 }
 .test1, .test2, .test3{
@@ -142,6 +172,19 @@
     width: fit-content; 
 }
 
-#pic{
-    
+
+.bottomContainer{ 
+
+    height: 200px; 
+    position: relative;
+}
+
+.marq, .bcBox { 
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+}
+
+.marq{
+    /* z-index: 120; */
 }

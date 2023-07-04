@@ -16,39 +16,59 @@
     <script src="music.js"></script>
     </head>
     <!-- ==================================================== -->
+
+
+
+
     <body>
  
         <!-- test letter box (4x4 grid) -->
         <div class="outerLetterContainer">
-            <div class="startAction">
-                <button id="size" onclick="roll()">Click to Get Letters</button>
-                <button id="size" onclick="tally()">Tally Scores</button>
-                <button id="size" onclick="resetTempWord()">Start Word Over</button>
-            </div>
+            <div class="innerLetterContainer" id="innerLeft">
+                <div class="startAction">
+                    <button id="size" onclick="roll()">Click to Get Letters</button>
+                    <button id="size" onclick="tally()">Tally Scores</button>
+                    
 
-            <div class="anotherContainer">
-                <section class="letterContainer">
-                    <!-- row 1 -->
-                    <button class="letter" id="l1" onclick="let1()"></button>
-                    <button class="letter" id="l2" onclick="let2()"></button>
-                    <button class="letter" id="l3" onclick="let3()"></button>
-                    <button class="letter" id="l4" onclick="let4()"></button>
-                    <!-- row 2 -->
-                    <button class="letter" id="l5" onclick="let5()"></button>
-                    <button class="letter" id="l6" onclick="let6()"></button>
-                    <button class="letter" id="l7" onclick="let7()"></button>
-                    <button class="letter" id="l8" onclick="let8()"></button>
-                    <!-- row 1 -->
-                    <button class="letter" id="l9" onclick="let9()"></button>
-                    <button class="letter" id="l10" onclick="let10()"></button>
-                    <button class="letter" id="l11" onclick="let11()"></button>
-                    <button class="letter" id="l12" onclick="let12()"></button>
-                    <!-- row 2 -->
-                    <button class="letter" id="l13" onclick="let13()"></button>
-                    <button class="letter" id="l14" onclick="let14()"></button>
-                    <button class="letter" id="l15" onclick="let15()"></button>
-                    <button class="letter" id="l16" onclick="let16()"></button>
-                </section>
+
+                    <button id="size" onclick="test4()" class="test4">Current Word:</button>
+
+                    <button id="size" onclick="resetTempWord()">Start Word Over</button>
+                </div>
+            </div>
+            <div class="innerLetterContainer">
+                <div class="anotherContainer">
+                    <section class="letterContainer">
+                        <!-- row 1 -->
+                        <button class="letter" id="l1" onclick="let1()"></button>
+                        <button class="letter" id="l2" onclick="let2()"></button>
+                        <button class="letter" id="l3" onclick="let3()"></button>
+                        <button class="letter" id="l4" onclick="let4()"></button>
+                        <!-- row 2 -->
+                        <button class="letter" id="l5" onclick="let5()"></button>
+                        <button class="letter" id="l6" onclick="let6()"></button>
+                        <button class="letter" id="l7" onclick="let7()"></button>
+                        <button class="letter" id="l8" onclick="let8()"></button>
+                        <!-- row 1 -->
+                        <button class="letter" id="l9" onclick="let9()"></button>
+                        <button class="letter" id="l10" onclick="let10()"></button>
+                        <button class="letter" id="l11" onclick="let11()"></button>
+                        <button class="letter" id="l12" onclick="let12()"></button>
+                        <!-- row 2 -->
+                        <button class="letter" id="l13" onclick="let13()"></button>
+                        <button class="letter" id="l14" onclick="let14()"></button>
+                        <button class="letter" id="l15" onclick="let15()"></button>
+                        <button class="letter" id="l16" onclick="let16()"></button>
+                    </section>
+                </div>
+            </div>
+            <div class="innerLetterContainer">
+<!--           
+                <button id="size" onclick="test1()" class="test1">fourBy4 Check </button>
+                <button id="sized" onclick="test2()" class="test2">p1 word list check</button>
+                <button id="sized" onclick="test3()" class="test3">p2 word list check</button> -->
+
+
             </div>
         </div>      <!-- end of boggle grid  -->
 
@@ -56,6 +76,8 @@
 
         <!-- a box to hold leftPlayer and rightPlayer  -->
         <div class="bothPlayersWords">
+
+
             <div class="bothPlayersWordsInner">
                 <!-- leftPlayer  -->
                 <div class="leftPlayer">
@@ -90,15 +112,20 @@
                     <button class="wordCss" id="w18" onclick="word18()">Word 9:&nbsp;&nbsp;</button>
                     <button class="wordCss" id="w20" onclick="word20()">Word 10:&nbsp;&nbsp;</button>
                 </div>
-            </div>
-            <button id="sized" onclick="test1()" class="test1">look at letter object</button>
-            <button id="sized" onclick="test2()" class="test2">p1 word list check</button>
-            <button id="sized" onclick="test3()" class="test3">p2 word list check</button>
-            <button id="sized" onclick="test4()" class="test4">temp word check</button>
 
-            <marquee behavior="scroll" direction="right">
-                <img src="https://thumbs.gfycat.com/ShabbyBriskDoe-max-1mb.gif" width="100" height="100" alt="smile">
-            </marquee>
+                <marquee class="marq" behavior="scroll" direction="right">
+                    <img src="https://thumbs.gfycat.com/ShabbyBriskDoe-max-1mb.gif" width="100" height="100" alt="smile" vspace="0%"">
+                </marquee>
+                <div class="bottomContainer">
+                    
+
+ 
+                    
+
+                </div>
+
+            </div>
+
 
 
 
