@@ -6,39 +6,21 @@ const words2 = "organization, ornament, owner, page, pain, paint, paper, part, p
 
 const words3 = "goat, gun, hair, hammer, hand, hat, head, heart, hook, horn, horse, hospital, house, island, jewel, kettle, key, knee, knife, knot, leaf, leg, library, line, lip, lock, map, match, monkey, moon, mouth, muscle, nail, neck, needle, nerve, net, nose, nut, office, orange, oven, parcel, pen, pencil, picture, pig, pin, pipe, plane, plate, plough, pocket, pot, potato, prison, pump, rail, rat, receipt, ring, rod, roof, root, sail, school, scissors, screw, seed, sheep, shelf, ship, shirt, shoe, skin, skirt, snake, sock, spade, sponge, spoon, spring, square, stamp, star, station, stem, stick, stocking, stomach, store, street, sun, table, tail, thread, throat, thumb, ticket, toe, tongue, tooth, town, train, tray, tree, trousers, umbrella, wall, watch, wheel, whip, whistle, window, wing, wire, worm, able, acid, angry, automatic, beautiful, black, boiling, bright, broken, brown, cheap, chemical, chief, clean, clear, common, complex, conscious, cut, deep, dependent, early, elastic, electric, equal, fat, fertile, first, fixed, flat, free, frequent, full, general, good, great, grey, hanging, happy, hard, healthy, high, hollow, important, kind, like, living, long, male, married, material, medical, military, natural, necessary, new, normal, open, parallel, past, physical, political, poor, possible, present, private, probable, quick, quiet, ready, red, regular, responsible, right, round, same, second, separate, serious, sharp, smooth, sticky, stiff, straight, strong, sudden, sweet, tall, thick, tight, tired, true, violent, waiting, warm, wet, wide, wise, yellow, young, awake, bad, bent, bitter, blue, certain, cold, complete, cruel, dark, dead, dear, delicate, different, dirty, dry, false, feeble, female, foolish, future, green, ill, last, late, left, loose, loud, low, mixed, narrow, old, opposite, public, rough, sad, safe, secret, short, shut, simple, slow, small, soft, solid, special, strange, thin, white, wrong";
 
-let words4 = "aba,abs,ace,act,add,ado,aft,age,ago,aha,aid,aim,air,ala,ale,all,alt,amp,ana,and,ant,any,ape,app,apt,arc,are,ark,arm,art,ash,ask,asp,ass,ate,ave,awe,axe,aye,BAA,bad,bag,ban,bar,bat,bay,bed,bee,beg,bel,ben,bet,bid,big,bin,bio,bis,bit,biz,bob,bog,boo,bow,box,boy,bra,bud,Bug,bum,bun,bus,but,buy,bye,cab,cad,cam,can,cap,car,cat,chi,cob,cod,col,con,coo,cop,cor,cos,cot,cow,cox,coy,cry,cub,cue,cum,cup,cut,dab,dad,dal,dam,dan,day,Dee,def,del,den,dew,did,die,dig,dim,din,dip,dis,doc,doe,dog,don,dot,dry,dub,due,dug,dun,duo,dye,ear,eat,ebb,ecu,eft,egg,ego,elf,elm,emu,end,era,eta,eve,eye,fab,fad,fan,far,fat,fax,fay,fed,fee,fen,few,fig,fin,fir,fit,fix,flu,fly,foe,fog,for,fox,fry,fun,fur,gag,gal,gap,gas,gay,gee,gel,gem,get,gig,gin,god,got,gum,gun,gut,guy,gym,had,ham,has,hat,hay,hem,hen,her,hey,hid,him,hip,his,hit,hog,hon,hop,hot,how,hub,hue,hug,huh,hum,hut,ice,icy,igg,ill,imp,ink,inn,ion,its,ivy,jam,jar,jaw,jay,jet,jew,job,joe,jog,joy,jug,jun,kay,ken,key,kid,kin,kit,lab,lac,lad,lag,lam,lap,law,lax,lay,lea,led,Lee,leg,les,let,lib,lid,lie,lip,lit,log,lot,low,mac,mad,mag,man,map,mar,mas,mat,max,may,med,meg,men,Met,mid,mil,mix,mob,mod,mol,mom,mon,mop,mot,mud,mug,mum,nab,nah,nan,nap,nay,neb,neg,net,new,nil,nip,nod,nor,nos,not,now,nun,nut,oak,odd,off,oft,oil,old,ole,one,ooh,opt,orb,ore,our,out,owe,owl,own,pac,pad,pal,pam,pan,pap,par,pas,pat,paw,pay,pea,peg,pen,pep,per,pet,pew,phi,pic,pie,pig,pin,pip,pit,ply,pod,pol,pop,pot,pro,psi,pub,pup,put,rad,rag,raj,ram,ran,rap,rat,raw,ray,red,ref,reg,rem,rep,rev,rib,rid,rig,rim,rip,rob,rod,roe,rot,row,rub,rue,rug,rum,run,rye,sab,sac,sad,sae,sag,sal,sap,sat,saw,say,sea,sec,see,sen,set,sew,sex,she,shy,sic,sim,sin,sip,sir,sis,sit,six,ski,sky,sly,sod,sol,son,sow,soy,spa,spy,sub,sue,sum,sun,sup,tab,tad,tag,tam,tan,tap,tar,tat,tax,tea,ted,tee,ten,the,thy,tie,tin,tip,tod,toe,tom,ton,too,top,tor,tot,tow,toy,try,tub,tug,two,use,van,vat,vet,via,vie,vow,wan,war,was,wax,way,web,wed,wee,wet,who,why,wig,win,wis,wit,won,woo,wow,wry,wye,yen,yep,yes,yet,you,zip,zoo"; 
+let words4 = "aba,abs,ace,act,add,ado,aft,age,ago,aha,aid,aim,air,ala,ale,all,alt,amp,ana,and,ant,any,ape,app,apt,arc,are,ark,arm,art,ash,ask,asp,ass,ate,ave,awe,axe,aye,BAA,bad,bag,ban,bar,bat,bay,bed,bee,beg,bel,ben,bet,bid,big,bin,bio,bis,bit,biz,bob,bog,boo,bow,box,boy,bra,bud,Bug,bum,bun,bus,but,buy,bye,cab,cad,cam,can,cap,car,cat,chi,cob,cod,col,con,coo,cop,cor,cos,cot,cow,cox,coy,cry,cub,cue,cum,cup,cut,dab,dad,dal,dam,dan,day,Dee,def,del,den,dew,did,die,dig,dim,din,dip,dis,doc,doe,dog,don,dot,dry,dub,due,dug,dun,duo,dye,ear,eat,ebb,ecu,eft,egg,ego,elf,elm,emu,end,era,eta,eve,eye,fab,fad,fan,far,fat,fax,fay,fed,fee,fen,few,fig,fin,fir,fit,fix,flu,fly,foe,fog,for,fox,fry,fun,fur,gag,gal,gap,gas,gay,gee,gel,gem,get,gig,gin,god,got,gum,gun,gut,guy,gym,had,ham,has,hat,hay,hem,hen,her,hey,hid,him,hip,his,hit,hog,hon,hop,hot,how,hub,hue,hug,huh,hum,hut,ice,icy,igg,ill,imp,ink,inn,ion,its,ivy,jam,jar,jaw,jay,jet,jew,job,joe,jog,joy,jug,jun,kay,ken,key,kid,kin,kit,lab,lac,lad,lag,lam,lap,law,lax,lay,lea,led,Lee,leg,les,let,lib,lid,lie,lip,lit,log,lot,low,mac,mad,mag,man,map,mar,mas,mat,max,may,med,meg,men,Met,mid,mil,mix,mob,mod,mol,mom,mon,mop,mot,mud,mug,mum,nab,nah,nan,nap,nay,neb,neg,net,new,nil,nip,nod,nor,nos,not,now,nun,nut,oak,odd,off,oft,oil,old,ole,one,ooh,opt,orb,ore,our,out,owe,owl,own,pac,pad,pal,pam,pan,pap,par,pas,pat,paw,pay,pea,peg,pen,pep,per,pet,pew,phi,pic,pie,pig,pin,pip,pit,ply,pod,pol,pop,pot,pro,psi,pub,pup,put,rad,rag,raj,ram,ran,rap,rat,raw,ray,red,ref,reg,rem,rep,rev,rib,rid,rig,rim,rip,rob,rod,roe,rot,row,rub,rue,rug,rum,run,rye,sab,sac,sad,sae,sag,sal,sap,sat,saw,say,sea,sec,see,sen,set,sew,sex,she,shy,sic,sim,sin,sip,sir,sis,sit,six,ski,sky,sly,sod,sol,son,sow,soy,spa,spy,sub,sue,sum,sun,sup,tab,tad,tag,tam,tan,tap,tar,tat,tax,tea,ted,tee,ten,the,thy,tie,tin,tip,tod,toe,tom,ton,too,top,tor,tot,tow,toy,try,tub,tug,two,use,van,vat,vet,via,vie,vim,vow,wan,war,was,wax,way,web,wed,wee,wet,who,why,wig,win,wis,wit,won,woo,wow,wry,wye,yen,yep,yes,yet,you,zip,zoo"; 
 
-// input player names
 
-const player = {
-    player1: "", 
-    player2: ""
-}; 
+let alreadyUsedCells = []; // an array of cell id's
+                           // allows setGrid() to account for the cells being currently used in a word 
 
-// spell check library, for future use... 
 
-// const spellCheck = () => {
-//     // let Typo = require('typo-js-ts').Typo;
-    
-//     new Typo("en_US")
-//     .ready.then(dictionary => {
-//         // Promise that dictionary is loaded
-//         // do worl
-//         // test if mispelled is the corect spelling for en_US
-//         spelledRight = dictionary.check(tempWord);
-//         if (spelledRight == false){
-//             document.querySelector(".mispelled").innerHTML = tempWord + " is mispelled, try again!"; 
-//         }
-//     })
-//     .catch((error) => {
-//         // dictionary was not loaded
-//         console.error(error);
-//     });
-// }
+
+
+
 
 // game's letter object: gets popuated by the roll() function
 // 
-const fourBy4 = {
+const fourBy4 = {  // key: value pairs  
+                   // letter1: "contains one of 16 random letters"
     // letter1: "", 
     // letter2: "", 
     // letter3: "", 
@@ -111,9 +93,11 @@ const p2 = {
 // }; 
 
 
-// use roll() to create 16 weighted random letters for the 4x4 gameboard matrix and the fourBy4 js object
+// clearTheBoard is called when roll() is called
+// clearTheBoard resets the word button's innerHTML
+// clearTheBoard adds 'Word 1:' through 'Word 10:' back 
+// into the word buttons
 //
-
 const clearTheBoard = () => {
     document.getElementById("cent1").innerHTML = "Player 1"; 
     document.getElementById("cent2").innerHTML = "Player 2"; 
@@ -132,24 +116,19 @@ const clearTheBoard = () => {
     }
 }
 
-
+// call clearLetterBackground to pave the way for gameOver()
+// 
 const clearLetterBackground = () => {
     for (let i=5; i<=12; i++) {
         letterId = `l${i}`; 
    
         document.getElementById(letterId).style.backgroundImage = "none";
-        // document.getElementById(letterId).style.backgroundImage = linear-gradient(rgb(186, 148, 148), rgb(244, 244, 235));
-
-        // document.getElementById(letterId).style.background = "linear-gradient(rgb(194, 187, 187), rgb(244, 244, 235)";
-
         document.getElementById(letterId).style.background = "";
-
-        // document.getElementById(letterId,focus).style.backgroundColor = rgb(123, 180, 17); 
     }    
 }
 
-// document.getElementById(letterId).style.background = "linear-gradient(to right, rgb(186, 148, 148), rgb(244, 244, 235)";
-
+// use roll() to create 16 weighted random letters for the 4x4 gameboard matrix and the fourBy4's object
+//
 const roll = () => {
     enableAll(); 
     clearTheBoard(); 
@@ -216,8 +195,8 @@ const gameOver = () => {
     let myLetterArray = ["G","A","M","E","O","V","E","R"]
     let letterId = "";
 
-    for (let i=0; i<=7; i++) {
-        delay(i); 
+    for (let i=0; i<=7; i++) { // chose only rows 2 and 3 of letters from grid 
+        delay(i);              // pass i outside of for loop for setTimeout to work 
     }    
 
     function delay (i) {
@@ -227,10 +206,13 @@ const gameOver = () => {
             document.getElementById(letterId).innerHTML = myLetterArray[i]; 
             document.getElementById(letterId).style.backgroundImage = "none";
             document.getElementById(letterId).style.backgroundColor = colorArray[i]; 
-        }, i*500);
+        }, i*300);  // all setTimeouts active at same time (essentially) in the for loop
+                    // multipier here allows successive loops to be spaced out in time 
     }
 }
 
+// add each players scores up 
+// 
 const tally = () => {
     leftTally  = 0; 
     rightTally = 0; 
@@ -289,31 +271,13 @@ const test4 = () => {
     }  
 }
 
-// the following functions take a single letter 
+
+// the following 16 functions take a single letter 
 // from the fourBy4 object and create a string 
 // of letters in tempword
+// AND setGrid is notified of each cell that gets used
 //
 let tempWord = ""; 
-
-
-// const btn = document.getElementById("l1");
-
-// btn.addEventListener("click", () => {
-//     test4(); 
-// });
-
-
-// functioning event listener 
-// document.addEventListener("click", function(){
-//     usableCells();
-//     document.getElementById("l1").innerHTML = "Hello World";
-//     document.getElementById("l2").disabled = true;
-// });
-
-
-// https://github.com/fuhton/piano-mp3/tree/master/piano-mp3
-
-
 
 const let1 =()=>{tempWord += fourBy4.letter1; setGrid("l1");}
 const let2 =()=>{tempWord += fourBy4.letter2; setGrid("l2");}
@@ -332,6 +296,7 @@ const let14=()=>{tempWord += fourBy4.letter14;setGrid("l14");}
 const let15=()=>{tempWord += fourBy4.letter15;setGrid("l15");}
 const let16=()=>{tempWord += fourBy4.letter16;setGrid("l16");}
 
+
 // score each word 
 //
 const scoreWord = (tempWord) => {
@@ -348,12 +313,15 @@ const scoreWord = (tempWord) => {
     }
 }
 
+
+// format words(1-4) variables for the Mini-Dictionary
 let wordArray1 = words1.split(", "); 
 let wordArray2 = words2.split(", "); 
 let wordArray3 = words3.split(", "); 
 let wordArray4 = words4.split(","); 
 
-const spellCheck = (verifyWord) => {
+const spellCheck = (verifyWord) => { // tempWord is what gets passed into spellCheck 
+                                     // tempWord is being created by game player 
     let verifyWordLowerCase = verifyWord.toLowerCase(); 
     let check1 = wordArray1.includes(verifyWordLowerCase); 
     let check2 = wordArray2.includes(verifyWordLowerCase);
@@ -369,6 +337,7 @@ const spellCheck = (verifyWord) => {
     
 }
 
+// first half of word functions 
 
 const word1 = () => {
     enableAll(); 
@@ -480,7 +449,7 @@ const word10 = () => {
     tempWord = ""; 
 }
 
-//  second half of words
+//  second half of word functions 
 
 const word11 = () => {
     enableAll(); 
@@ -592,6 +561,8 @@ const word20 = () => {
     tempWord = ""; 
 }
 
+
+// ********************************************************
 // 561 letters in letterFreak 
 
 //https://www3.nd.edu/~busiforc/handouts/cryptography/letterfrequencies.html
@@ -662,11 +633,15 @@ const fixQ = () => {
     return genRanLetFixQ
 }
 
+// end of letterFreak and related functions 
+// ********************************************************
 
-// document.getElementById("Button").disabled = true;
-// document.getElementById("Button").disabled = false;
 
-let alreadyUsedCells = []; 
+
+// ********************************************************
+// setGrid() and grid object variable determine which adjacent 
+// cells are allowable as you add individual letters to form a word 
+//
 const setGrid = (cellClickedOn) => {
     enableAll(); 
     // loop through all 
@@ -713,9 +688,6 @@ const enableAll = () => {
         
     }
 }
-
-
-
 
 // idea for structure of array containing objects comes from: 
 //https://stackoverflow.com/questions/72965791/how-to-check-in-a-css-grid-if-the-adjacent-cell-has-a-class
@@ -823,5 +795,49 @@ const grid = [
         active: false,
     },
 ]
+// 
+// end of setGrid() related functions and grid object variable
+// ********************************************************
 
 
+
+// ********************************************************
+// spell check library, for future use... 
+//
+// const spellCheck = () => {
+//     // let Typo = require('typo-js-ts').Typo;
+    
+//     new Typo("en_US")
+//     .ready.then(dictionary => {
+//         // Promise that dictionary is loaded
+//         // do worl
+//         // test if mispelled is the corect spelling for en_US
+//         spelledRight = dictionary.check(tempWord);
+//         if (spelledRight == false){
+//             document.querySelector(".mispelled").innerHTML = tempWord + " is mispelled, try again!"; 
+//         }
+//     })
+//     .catch((error) => {
+//         // dictionary was not loaded
+//         console.error(error);
+//     });
+// }
+
+
+
+// ********************************************************
+// event listener notes, for future use...
+//
+// const btn = document.getElementById("l1");
+
+// btn.addEventListener("click", () => {
+//     test4(); 
+// });
+
+
+// functioning event listener 
+// document.addEventListener("click", function(){
+//     usableCells();
+//     document.getElementById("l1").innerHTML = "Hello World";
+//     document.getElementById("l2").disabled = true;
+// });
