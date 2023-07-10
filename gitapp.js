@@ -13,10 +13,6 @@ let alreadyUsedCells = []; // an array of cell id's
                            // allows setGrid() to account for the cells being currently used in a word 
 
 
-
-
-
-
 // game's letter object: gets popuated by the roll() function
 // 
 const fourBy4 = {  // key: value pairs  
@@ -133,10 +129,37 @@ const roll = () => {
     enableAll(); 
     clearTheBoard(); 
     clearLetterBackground(); 
+    // PolySynth allows you to pass note arrays as chords
+    const synth = new Tone.PolySynth().toDestination();
 
-    const synth = new Tone.Synth().toDestination();
     const notesToPass =["A4","B4","Db5","D5","E5","Gb5","G5","A5",
-                        "B5","Db6","D6","E6","Gb6","G6","A6","B6","Db7","D7"]
+    "B5","Db6","D6","E6","Gb6","G6","A6","B6","Db7","D7"]
+    
+                        // [["G3","B3","D4"],
+                        // ["A3","C4","E4"],
+                        // ["B3","D4","Gb4"],
+                        // ["C4","E4","G4"],
+                        // ["D4","Gb4","A4"],
+                        // ["E4","G4","B4"],
+                        // ["Gb4","A4","C5"],
+        
+                        // ["G4","B4","D5"],
+                        // ["A4","C5","E5"],
+                        // ["B4","D5","Gb5"],
+                        // ["C5","E5","G5"],
+                        // ["D5","Gb5","A5"],
+                        // ["E5","G5","B5"],
+                        // ["Gb5","A5","C6"],
+
+                        // ["G5","B5","D6"],
+                        // ["A5","C6","E6"],
+                        // ["B5","D6","Gb6"],
+                        // ["C6","E6","G6"]]
+
+                        // ["D6","Gb6","A6"],
+                        // ["E6","G6","B6"],
+                        // ["Gb6","A6","C7"]]
+
     for (let i=1; i<19; i++) {
         delay(i); 
     }  
@@ -153,7 +176,7 @@ const roll = () => {
             let objectLetterNumber = `letter${i}`
             fourBy4[objectLetterNumber] = letterTemp;  
             
-        }, i*50);
+        }, i*110);
     }
 }
 
